@@ -11,7 +11,25 @@
  }
 
  .travel-create {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
+}
+
+.travel-form {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-self: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.travel-create-header {
   text-align: center;
-  align-content: center; 
-  margin: auto;
+}
+
+.travel-form-button {
+  background-color: green;
+  color: white;
 }

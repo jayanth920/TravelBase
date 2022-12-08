@@ -28,14 +28,17 @@ const TravelCreate = () => {
 
   return (
     <div className='travel-create'>
+
+        <h2 className='travel-create-header'>Welcome, add a new travel destinantion!</h2>
+        
+
         <form className='travel-form'>
-            <input placeholder='Enter City Name...'></input>
-            <input></input>
-            <input></input>
-            <input></input>
-            <input></input>
-            <input></input>
-            <input></input>
+            <input placeholder='City Name'></input>
+            <input placeholder='GPS Coordinates'></input>
+            <input placeholder='Population'></input>
+            <input placeholder='Places to Discover'></input>
+            <input placeholder='Places to Eat'></input>
+            <button className='travel-form-button'>Submit</button>
         </form>
 
     </div>
