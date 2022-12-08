@@ -20,7 +20,7 @@ function App() {
       url: 'https://pokeapi.co/api/v2/pokemon/249'
     })
     .then(res => 
-      setPokemon(res.data))
+      setTravels(res.data))
     .catch(err => console.log(err))
   }
 
@@ -36,7 +36,7 @@ function App() {
       </div>
 
       <Routes>
-        <Route path='/' element={<Home travels={travels} pokemon={pokemon} />} />
+        <Route path='/' element={<Home travels={travels} />} />
         <Route path='/travels' element={<TravelDetails />} />
         <Route path='/create' element={<TravelCreate />} />
       </Routes>
