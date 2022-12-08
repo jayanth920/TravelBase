@@ -6,7 +6,7 @@ const Home = ({travels}) => {
 
   const getList = () => {
     let travelMap = travels.map((travels) => {
-      return <div>{travels.name}</div>
+      return <div className='travel-list'>{travels.name}</div>
     })
     setTravelList(travelMap)
   }
@@ -21,7 +21,7 @@ console.log(travelList);
   return (
     <div className='home'>
       <p>Welcome Home</p>
-      <div>
+      <div className='travel-list-container'>
         {travelList}
       </div>
     </div>

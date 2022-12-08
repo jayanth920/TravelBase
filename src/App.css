@@ -65,3 +65,19 @@
 .travel-details {
   text-align: center;
 }
+
+.travel-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50%;
+  align-content: center;
+}
+
+.travel-list {
+  background-color: white;
+  border: 2px black solid;
+  margin: 20px;
+  align-self: center;
+}
+
