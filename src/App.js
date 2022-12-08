@@ -12,8 +12,6 @@ import TravelDetails from './components/TravelDetails/TravelDetails.js'
 
 function App() {
   const [travels, setTravels] = useState([])
-  const [pokemon, setPokemon] = useState([])
-
 
 
   const getTravels =  async () => {
@@ -29,26 +27,6 @@ function App() {
   useEffect(() => {
     getTravels()
   }, [])
-
-    
-
-
-
-  console.log(pokemon);
-  console.log(pokemon.name);
-  console.log(pokemon.sprites && pokemon.sprites.front_default);
-
-  if (pokemon.name) {
-    console.log('exists');
-  }
-
-  if (pokemon.sprites && pokemon.sprites.front_default) {
-    console.log('exists');
-  } else {
-    console.log('no show');
-  }
-
-
 
 
   return (

@@ -1,11 +1,8 @@
 import React from 'react'
 
-const Home = ({pokemon}) => {
+const Home = () => {
   return (
-    <div className='home'>
-      <p>Welcome Home <br></br> {pokemon.id} {" "} {pokemon.name}</p>
-      <img src={pokemon.sprites && pokemon.sprites.front_default}></img>
-    </div>
+    <div>Home</div>
   )
 }
 
