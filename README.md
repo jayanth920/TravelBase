@@ -1,6 +1,12 @@
-# Front End for Travel App
+# Front End TravelBase
 
-# Getting Started with Create React App
+React Frontend for TravelBase app.
+
+Project 3 General Assembly. 
+
+Team: Nikhil Prasad, Jayanth Gajula, Naveed Ahmad.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
