@@ -29,6 +29,7 @@ function App() {
   }, [])
 
   console.log(travels);
+  // console.log(travels[0]._id);
 
 
   return (
@@ -39,8 +40,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home travels={travels} />} />
-        <Route path='/travels' element={<TravelDetails />} />
-        <Route path='/create' element={<TravelCreate />} />
+        <Route path='travels/:id' element={<TravelDetails />} />
+        <Route path='create' element={<TravelCreate />} />
       </Routes>
     </div>
   )
