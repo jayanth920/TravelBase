@@ -19,7 +19,7 @@ function App() {
   const getTravels =  async () => {
      const response = await axios({
       method: 'get',
-      url: 'https://pokeapi.co/api/v2/pokemon/1'
+      url: 'https://pokeapi.co/api/v2/pokemon/249'
     })
     .then(res => 
       setPokemon(res.data))
