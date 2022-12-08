@@ -1,13 +1,10 @@
 import React from 'react'
 
-function Home({travels}) {
+const Home = ({travels}) => {
   return (
     <div className='home'>
-      Home Page Test <br/>
-      {travels.id} <br/>
-      {travels.name}<br/>
-      {/* {travels.moves[0].move.name && travels.moves[0].move.name}  */}
-
+      Welcome Home <br></br> {travels.id} {" "} {travels.name}
+      
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TravelDetails() {
+const TravelDetails = () => {
   return (
     <div>TravelDetails</div>
   )
