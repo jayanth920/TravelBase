@@ -12,17 +12,20 @@ function App() {
 
   useEffect(() => {
     getTravels()
-  }, [travels])
+  }, [])
 
-  const getTravels = async () => {
-    await axios({
+  const getTravels =  async () => {
+     await axios({
       method: 'get',
-      url: ''
+      url: 'https://pokeapi.co/api/v2/evolution-chain/25'
     })
     .then(res => 
       setTravels(res.data))
-      .catch(err => console.log(err))
+    .catch(err => console.log(err));
   }
+
+  console.log(travels.chain.species.name);
+  console.log(travels);
 
   return (
     <div>
