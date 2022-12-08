@@ -40,8 +40,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home travels={travels} />} />
-        <Route path='travels/:id' element={<TravelDetails travels={travels} />} />
-        <Route path='create' element={<TravelCreate />} />
+        <Route path='/travels/:id' element={<TravelDetails travels={travels} />} />
+        <Route path='/create' element={<TravelCreate />} />
       </Routes>
     </div>
   )

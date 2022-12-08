@@ -64,7 +64,11 @@
 
 .travel-details {
   text-align: center;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .travel-list-container {
   display: flex;
