@@ -1,10 +1,29 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+
 
 const Home = ({travels}) => {
+  const [travelList, setTravelList] = useState('')
+
+  const getList = () => {
+    let travelMap = travels.map((travels) => {
+      return <div>{travels.name}</div>
+    })
+    setTravelList(travelMap)
+  }
+
+  useEffect(() => {
+    getList()
+  },[travels])
+
+
+console.log(travelList);
+
   return (
     <div className='home'>
       <p>Welcome Home</p>
-      {travels[0 ]&& travels[0].name}
+      <div>
+        {travelList}
+      </div>
     </div>
   )
 }
