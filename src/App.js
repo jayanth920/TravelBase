@@ -6,6 +6,7 @@ import axios from 'axios';
 // Components 
 import Header from './components/Header/Header.js' 
 import Home from './components/Home/Home.js'
+import TravelCreate from './components/TravelCreate/TravelCreate';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home travels={travels} />} />
+        <Route path='/create' element={<TravelCreate />} />
         
       </Routes>
     </div>
