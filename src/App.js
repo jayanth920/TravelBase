@@ -17,7 +17,7 @@ function App() {
   const getTravels =  async () => {
      const response = await axios({
       method: 'get',
-      url: 'https://pokeapi.co/api/v2/pokemon/249'
+      url: 'https://backend-travelapp.fly.dev/'
     })
     .then(res => 
       setTravels(res.data))
@@ -27,6 +27,8 @@ function App() {
   useEffect(() => {
     getTravels()
   }, [])
+
+  console.log(travels);
 
 
   return (

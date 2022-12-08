@@ -31,7 +31,9 @@ const travelCreate = async () => {
     }
 }
 
-const handleCreate = ''
+const handleCreate = (e) => {
+    const newTravelData = {...newTravel}
+}
 
 
   return (
