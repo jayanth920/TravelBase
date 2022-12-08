@@ -6,11 +6,14 @@ import axios from 'axios';
 // Components 
 import Header from './components/Header/Header.js' 
 import Home from './components/Home/Home.js'
-import TravelCreate from './components/TravelCreate/TravelCreate';
+import TravelCreate from './components/TravelCreate/TravelCreate.js';
+import TravelDetails from './components/TravelDetails/TravelDetails.js'
 
 
 function App() {
   const [travels, setTravels] = useState([])
+  const [pokemon, setPokemon] = useState([])
+
 
 
   const getTravels =  async () => {
@@ -19,20 +22,34 @@ function App() {
       url: 'https://pokeapi.co/api/v2/pokemon/1'
     })
     .then(res => 
-      setTravels(res.data))
-    .catch(err => console.log(err));;
+      setPokemon(res.data))
+    .catch(err => console.log(err))
   }
 
   useEffect(() => {
     getTravels()
-  }, [travels.length])
+  }, [])
+
+    
 
 
 
+  console.log(pokemon);
+  console.log(pokemon.name);
+  console.log(pokemon.sprites && pokemon.sprites.front_default);
 
-  console.log(travels);
-  // console.log(travels.moves[0].move.name)
-  console.log(travels.name);
+  if (pokemon.name) {
+    console.log('exists');
+  }
+
+  if (pokemon.sprites && pokemon.sprites.front_default) {
+    console.log('exists');
+  } else {
+    console.log('no show');
+  }
+
+
+
 
   return (
     <div>
@@ -41,9 +58,9 @@ function App() {
       </div>
 
       <Routes>
-        <Route path='/' element={<Home travels={travels} />} />
+        <Route path='/' element={<Home travels={travels} pokemon={pokemon} />} />
+        <Route path='/travels' element={<TravelDetails />} />
         <Route path='/create' element={<TravelCreate />} />
-        
       </Routes>
     </div>
   )

@@ -59,4 +59,9 @@
   flex-direction: row;
   gap: 20px;
   list-style-type: none;
+  font-size: small;
+}
+
+.travel-details {
+  text-align: center;
 }

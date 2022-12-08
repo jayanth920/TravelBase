@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Home = ({travels}) => {
+const Home = ({pokemon}) => {
   return (
     <div className='home'>
-      Welcome Home <br></br> {travels.id} {" "} {travels.name}
-      
+      <p>Welcome Home <br></br> {pokemon.id} {" "} {pokemon.name}</p>
+      <img src={pokemon.sprites && pokemon.sprites.front_default}></img>
     </div>
   )
 }
