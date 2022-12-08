@@ -5,27 +5,33 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 // Components 
 import Header from './components/Header/Header.js' 
+import Home from './components/Home/Home.js'
 
 
 function App() {
   const [travels, setTravels] = useState([])
 
-  useEffect(() => {
-    getTravels()
-  }, [])
 
   const getTravels =  async () => {
-     await axios({
+     const response = await axios({
       method: 'get',
-      url: 'https://pokeapi.co/api/v2/evolution-chain/25'
+      url: 'https://pokeapi.co/api/v2/pokemon/1'
     })
     .then(res => 
       setTravels(res.data))
-    .catch(err => console.log(err));
+    .catch(err => console.log(err));;
   }
 
-  console.log(travels.chain.species.name);
+  useEffect(() => {
+    getTravels()
+  }, [travels.length])
+
+
+
+
   console.log(travels);
+  // console.log(travels.moves[0].move.name)
+  console.log(travels.name);
 
   return (
     <div>
@@ -34,6 +40,7 @@ function App() {
       </div>
 
       <Routes>
+        <Route path='/' element={<Home travels={travels} />} />
         
       </Routes>
     </div>
