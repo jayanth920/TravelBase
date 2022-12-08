@@ -22,8 +22,16 @@ const TravelCreate = () => {
     })
 
     
-    const travelCreate = async () => {
+const travelCreate = async () => {
+    try {
+        const newCreate = await axios.post('url', newTravel)
     }
+    catch (err) {
+        console.log(err);
+    }
+}
+
+const handleCreate = ''
 
 
   return (
@@ -38,6 +46,8 @@ const TravelCreate = () => {
             <input placeholder='Population'></input>
             <input placeholder='Places to Discover'></input>
             <input placeholder='Places to Eat'></input>
+            <input placeholder='Date Entered MM-DD-YYYY'></input>
+            <input placeholder='Weather' ></input>
             <button className='travel-form-button'>Submit</button>
         </form>
 
