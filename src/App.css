@@ -64,7 +64,7 @@
 
 .travel-details {
   text-align: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
 }

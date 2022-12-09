@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     getTravels()
-  }, [])
+  }, [travels])
 
   console.log(travels);
   // console.log(travels[0]._id);
