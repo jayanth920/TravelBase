@@ -20,9 +20,10 @@ const TravelDetails = ({travels}) => {
 
       <div className='travel-details-list'>
       City Name: {travels[travelSearch].name}
+      <br></br>
 
       Location: {travels[travelSearch].location}
-
+      <br></br>
       Population: {travels[travelSearch].population}
     </div>
 
