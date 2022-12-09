@@ -28,9 +28,9 @@ const TravelDetails = ({travels}) => {
       <br></br>
       Weather: {travels[travelSearch].weather}
       <br></br>
-      Places to Discover: {travels[travelSearch].discover[0].name} {' '}Stars: {travels[travelSearch].discover[0].stars}
+      Places to Discover: {travels[travelSearch].discover.name}
       <br></br>
-      <img src={travels[travelSearch].discover[0].imageURL}></img>
+      <img className='discover-image' src={travels[travelSearch].discover.imageURL}></img>
     </div>
 
 

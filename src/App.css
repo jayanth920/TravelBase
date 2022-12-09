@@ -97,3 +97,8 @@
   color: #023e8a;
   font-weight: 800;
 }
+
+.discover-image {
+  height: 100%;
+  width: 400px;
+}
