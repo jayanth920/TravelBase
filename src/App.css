@@ -64,7 +64,7 @@
 
 .travel-details {
   text-align: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
 }
@@ -96,4 +96,9 @@
 .travel-list a:focus {
   color: #023e8a;
   font-weight: 800;
+}
+
+.discover-image {
+  height: 100%;
+  width: 400px;
 }

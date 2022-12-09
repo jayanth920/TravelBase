@@ -21,7 +21,6 @@ const Home = ({travels}) => {
   },[travels])
 
 
-console.log(travelList);
 
   return (
     <div className='home'>
