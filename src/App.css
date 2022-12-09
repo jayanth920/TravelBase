@@ -79,9 +79,21 @@
 }
 
 .travel-list {
-  background-color: white;
   border: 2px black solid;
   margin: 20px;
   align-self: center;
+  box-shadow: rgb(0 0 0 / 24%) 1px 1px 2px 0px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: aliceblue;
+  transition: 0.1s ease-in-out;
+}
+.travel-list a:hover {
+  color: #023e8a;
+  font-weight: 600;
 }
 
+.travel-list a:focus {
+  color: #023e8a;
+  font-weight: 800;
+}
