@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import './TravelDetails.css'
 
 
 const TravelDetails = ({travels}) => {
@@ -15,34 +16,37 @@ const TravelDetails = ({travels}) => {
   console.log(travelSearch);
 
   return (
-    <div className='travel-details'>
-      <h2>Location Details</h2>
-
-      <div className='travel-details-list'>
-      City Name: {travels[travelSearch].name}
-      <br></br>
-
-      Location: {travels[travelSearch].location}
-      <br></br>
-      Population: {travels[travelSearch].population}
-      <br></br>
-      Weather: {travels[travelSearch].weather}
-      <br></br>
-      Places to Discover: {travels[travelSearch].discover.name}
-      <br></br>
-      <img className='discover-image' src={travels[travelSearch].discover.imageURL}></img>
-      <br></br>
-      Food: {travels[travelSearch].food.place}
-      <br></br>
-      Stars: {travels[travelSearch].food.stars}
-      <br></br>
-      Description: {travels[travelSearch].food.description}
+    <div className="travel-details">
+      <div className="center text">
+        <label data-content="Location Details">
+          <div className='heading'>Location Details</div><br></br>
+        </label>
+      </div>
+<br></br>
+      <div className="travel-details-list">
+        <div className="elements">City Name: {travels[travelSearch].name}</div>
+        <br></br>
+        <div className='elements'>Location: {travels[travelSearch].location}</div>
+        <br></br>
+        <div className='elements'>Population: {travels[travelSearch].population}</div>
+        <br></br>
+        <div className='elements'>Weather: {travels[travelSearch].weather}</div>
+        <br></br>
+        <div className='elements'>Places to Discover: {travels[travelSearch].discover.name}</div>
+        <br></br>
+        <img
+          className="discover-image"
+          src={travels[travelSearch].discover.imageURL}
+        ></img>
+        <br></br>
+        <div className='elements'>Food: {travels[travelSearch].food.place}</div>
+        <br></br>
+        <div className='elements'>Stars: {travels[travelSearch].food.stars}</div>
+        <br></br>
+        <div className='elements'>Description: {travels[travelSearch].food.description}</div>
+      </div>
     </div>
-
-
-
-    </div>
-  )
+  );
 }
 
 export default TravelDetails
