@@ -10,7 +10,7 @@ const Home = ({travels}) => {
     let travelMap = travels.map((travels, index) => {
       return <div className='travel-list' key={index}>
         <Link to={'/travels/'+ travels._id}>
-          <div className='text'>{travels.name}</div>
+          <div className='name'>{travels.name}</div>
         </Link>
             </div>
     })

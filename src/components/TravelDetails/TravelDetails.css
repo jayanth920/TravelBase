@@ -22,10 +22,11 @@
     display: inline-block;
 }
 .heading{
-    box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc500b9 100%);
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 .center{
+    
     position: absolute;
     top: 12%;
     left: 49%;
@@ -41,7 +42,6 @@
     background-color: black;
     top:-37px;
     border-radius:10px ;
-    -webkit-text-stroke-width: 1px;
     position: relative;
     color: white;
     z-index: 2;
