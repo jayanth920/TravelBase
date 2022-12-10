@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+.travel-list-container{
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.55) 0px 5px 10px;
+    border-radius: 10px;
+}
 .travel-list{
-    background: linear-gradient(325deg,  #7824e7 0%,#fc7900 50%,#ffc800b9 100%);
-    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc500b9 100%);
+    box-shadow: inset 0 0 0 0 #000000;
+        box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 
+    
 }
 
+
 .text{
-  color: white ;
+  color: white;
   font-family: 'Unbounded', cursive;
   font-size: 50px;
-  color: white;
   background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
               rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
   background-size: 600vw 600vw;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  animation: slide 5s linear infinite forwards;
+  animation: slide 6s linear infinite forwards;
+
 
 }
 
