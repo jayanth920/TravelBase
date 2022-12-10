@@ -23,11 +23,12 @@
 }
 .heading{
     box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc500b9 100%);
 }
 .center{
     position: absolute;
     top: 12%;
-    left: 50%;
+    left: 49%;
     transform: translate(-50%, -50%);
     margin: 10px;
   }

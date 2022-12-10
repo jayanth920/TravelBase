@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import './Home.css'
 
 
 const Home = ({travels}) => {
@@ -9,7 +10,7 @@ const Home = ({travels}) => {
     let travelMap = travels.map((travels, index) => {
       return <div className='travel-list' key={index}>
         <Link to={'/travels/'+ travels._id}>
-          <div>{travels.name}</div>
+          <div className='text'>{travels.name}</div>
         </Link>
             </div>
     })
