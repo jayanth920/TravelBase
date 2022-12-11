@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import AnimCursor from './components/AnimCursor';
 // Components 
 import Header from './components/Header/Header.js' 
 import Home from './components/Home/Home.js'
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div>
+      <AnimCursor/>
       <div className='app-body'>
         <Header />
       </div>
