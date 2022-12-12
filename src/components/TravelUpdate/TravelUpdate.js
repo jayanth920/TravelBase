@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
 const TravelUpdate = ({id}) => {
-    const [forms, setForm] = useState({
+    const [form, setForm] = useState({
         name: '',
         location: '',
         population: 0,
@@ -22,10 +22,27 @@ const TravelUpdate = ({id}) => {
         weather: ''
       })
 
+      const travelRefresh = async () => {
+        try {
+            const change = await axios.put('url', form)
+        } catch (err) {
+            console.log(err);
+        }
+      }
+
+      const handleChange  = (e) => {
+        const newObj = {...form}
+
+        newObj[e.target.name] = e.target.value
+        setForm(newObj)
+      }
+
 
 
   return (
-    <div>TravelUpdate</div>
+    <div>
+        <button>Update Recipe</button>
+    </div>
   )
 }
 
