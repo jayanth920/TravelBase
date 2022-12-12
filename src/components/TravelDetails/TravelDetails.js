@@ -45,6 +45,7 @@ const TravelDetails = ({travels}) => {
         <br></br>
         <div className='elements'>Description: {travels[travelSearch].food.description}</div>
       </div>
+      <button className='updateButton'>UPDATE</button>
     </div>
   );
 }
