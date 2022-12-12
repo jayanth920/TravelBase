@@ -57,14 +57,14 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
     }
     setTimeout(() => {
       window.location.reload(false)
-    }, 5000)
+    }, 500)
     console.log('updated/reload page')
   }
 
   function refreshPage () {
     setTimeout(() => {
       window.location.reload(false)
-    }, 5000)
+    }, 500)
     console.log('reloaded page');
   }
 
@@ -85,7 +85,7 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
             <input placeholder='Weather' onChange={(e) => {setWeather(e.target.value)}} required></input>
         </form>
         <button className='update-button' onClick={travelRefresh}>Update Recipe</button>
-        <Link to='/'><TravelDelete id={id} /></Link>
+        <Link to='/' onClick={refreshPage}><TravelDelete id={id} /></Link>
     </div>
   )
 }
