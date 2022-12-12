@@ -45,7 +45,7 @@ const addToBase = () => {
         
 
         <form className='travel-form'>
-            <input placeholder='City Name' onChange={(e) => {setName(e.target.value)}}></input>
+            <input placeholder='City Name' onChange={(e) => {setName(e.target.value)}} required></input>
             <input placeholder='Location' onChange={(e) => {setLocation(e.target.value)}}></input>
             <input placeholder='Population' onChange={(e) => {setPopulation(e.target.value)}}></input>
             <input placeholder='Place to Discover'onChange={(e) => {setDiscovername(e.target.value)}}></input>
