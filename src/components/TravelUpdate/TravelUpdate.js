@@ -48,17 +48,17 @@ const TravelUpdate = ({id}) => {
   return (
     <div>
         <form className='recipe-update-form'>
-            <input placeholder='City Name' name='name' value={form.name} onChange={handleChange} required></input>
-            <input placeholder='Location' name='location' value={form.location} onChange={handleChange} required></input>
-            <input placeholder='Population' name='population' value={form.population} onChange={handleChange} required></input>
-            <input placeholder='Place to Discover' name='discover.name' value={form.discover.name} onChange={handleChange} required></input>
-            <input placeholder='Place Description' name='discover.description' value={form.discover.description} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='City Name' name='name' value={form.name} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='Location' name='location' value={form.location} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='Population' name='population' value={form.population} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='Place to Discover' name='discover.name' value={form.discover.name} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='Place Description' name='discover.description' value={form.discover.description} onChange={handleChange} required></input>
             {/* <input placeholder='Place Image URL' name='discover.imageURL' value={form.discover.imageURL} onChange={handleChange} required></input> */}
-            <input placeholder='Place to Eat' name='food.place' value={form.food.place} onChange={handleChange} required></input>
-            <input placeholder='Stars Rating' name='food.stars' value={form.food.stars} onChange={handleChange} required></input>
-            <input placeholder='Food Place Description' name='food.description' value={form.food.description} onChange={handleChange} required></input>
-            <input placeholder='Date Entered MM-DD-YYYY' name='date' value={form.date} onChange={handleChange} required></input>
-            <input placeholder='Weather' name='weather' value={form.weather} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='Place to Eat' name='food.place' value={form.food.place} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='Stars Rating' name='food.stars' value={form.food.stars} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='Food Place Description' name='food.description' value={form.food.description} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='Date Entered MM-DD-YYYY' name='date' value={form.date} onChange={handleChange} required></input>
+            <input className='input-elements'placeholder='Weather' name='weather' value={form.weather} onChange={handleChange} required></input>
         </form>
         <button className='update-button' onClick={travelRefresh}>Update Recipe</button>
         <Link to='/'><TravelDelete id={id} /></Link>
