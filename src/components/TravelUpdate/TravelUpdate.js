@@ -19,12 +19,13 @@ const TravelUpdate = ({id}) => {
           description: ''
         },
         date: '',
-        weather: ''
+        weather: '',
+        _id: id
       })
 
       const travelRefresh = async () => {
         try {
-            const change = await axios.put('url', form)
+            const change = await axios.put('https://backend-travelapp.fly.dev/update', form)
         } catch (err) {
             console.log(err);
         }
