@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 const TravelDelete = ({id}) => {
 
   const ident = {_id: id}
-  console.log(ident);
+  // console.log(ident);
 
 
   const removeTravel = () => {

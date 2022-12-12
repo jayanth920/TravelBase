@@ -27,7 +27,7 @@ const TravelUpdate = ({id}) => {
       })
 
       const ident = {_id: id}
-      console.log(ident);
+      // console.log(ident);
 
       const travelRefresh = async () => {
         try {
