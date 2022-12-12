@@ -20,43 +20,43 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
   const [foodDes, setFoodDes] = useState('')
   const [date, setDate] = useState('')
   const [weather, setWeather] = useState('')
+  let named = 'initial'
 
+  console.log(travelsData[travelSearch] && travelsData[travelSearch].name);
       
-      const travelRefresh = async () => {
-        if (name == '') {
-          console.log('blank name', travels[travelSearch].name)
-          setName(travels[travelSearch].name)
-        }
-        try {
-            const change = await axios.put('https://backend-travelapp.fly.dev/update', {
-              name: name,
-              location: location,
-              population: population,
-              discover:{
-                name: discoverName,
-                description: discoverDes,
-                imageURL: discoverImage
-              },
-              food:{
-                place: foodPlace,
-                stars: foodStars,
-                description:foodDes
-              },
-              date: date,
-              weather: weather,
-              _id: id
-            })
-        } catch (err) {
-            console.log(err);
-        }
-      }
+  const travelRefresh = async (e) => {
+    e.preventDefault();
+    if (name.trim().length !== 0) {
+      console.log('name is not empty');
+    } else {
+      console.log('name is empty');
+      setName('blanked')
+      named = travelsData[travelSearch].name
+    }
+    try {
+        const change = await axios.put('https://backend-travelapp.fly.dev/update', {
+          name: named,
+          location: location,
+          population: population,
+          discover:{
+            name: discoverName,
+            description: discoverDes,
+            imageURL: discoverImage
+          },
+          food:{
+            place: foodPlace,
+            stars: foodStars,
+            description:foodDes
+          },
+          date: date,
+          weather: weather,
+          _id: id
+        })
+    } catch (err) {
+        console.log(err);
+    }
+  }
 
-      const handleName = () => {
-        if (name == '') {
-          console.log('blank name', travels[travelSearch].name)
-          setName(travels[travelSearch].name)
-        }
-      }
 
   return (
     <div>
