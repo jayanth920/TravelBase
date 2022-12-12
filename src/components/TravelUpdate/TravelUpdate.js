@@ -6,8 +6,9 @@ import { useParams, Link } from 'react-router-dom'
 // Components 
 import TravelDelete from '../TravelDelete/TravelDelete'
 
-const TravelUpdate = ({id, travels}) => {
+const TravelUpdate = ({id, travels, travelSearch}) => {
   const travelsData = travels
+  console.log(travelsData, travelSearch);
   const [population, setPopulation] = useState(0)
   const [location, setLocation] = useState('')
   const [name, setName] = useState('')
@@ -22,6 +23,10 @@ const TravelUpdate = ({id, travels}) => {
 
       
       const travelRefresh = async () => {
+        if (name == '') {
+          console.log('blank name', travels[travelSearch].name)
+          setName(travels[travelSearch].name)
+        }
         try {
             const change = await axios.put('https://backend-travelapp.fly.dev/update', {
               name: name,
@@ -43,6 +48,13 @@ const TravelUpdate = ({id, travels}) => {
             })
         } catch (err) {
             console.log(err);
+        }
+      }
+
+      const handleName = () => {
+        if (name == '') {
+          console.log('blank name', travels[travelSearch].name)
+          setName(travels[travelSearch].name)
         }
       }
 
