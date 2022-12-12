@@ -7,21 +7,16 @@ const TravelDelete = ({id}) => {
   const ident = {_id: id}
   console.log(ident);
 
-    // const travelDelete = () => {
-    //     axios({
-    //         method: 'delete',
-    //         url: 'https://backend-travelapp.fly.dev/delete'
-    //     })
-    //     .catch(err => console.log(err))
-    // }
 
-    const removeTravel = () => {
-      try {
-        const remove = axios.delete('https://backend-travelapp.fly.dev/delete', {_id: id})
-      } catch (err) {
-        console.log(err);
-      }
-    }
+  const removeTravel = () => {
+    const res = axios.delete('https://backend-travelapp.fly.dev/delete', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: {_id: id}
+    })
+    console.log('delete');
+  }
 
   return (
     <div>
