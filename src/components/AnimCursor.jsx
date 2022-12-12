@@ -4,10 +4,10 @@ function AnimCursor() {
   return (
     <AnimatedCursor
       innerSize={13}
-      outerSize={18}
-      color='230, 230, 250'
+      outerSize={16}
+      color='100, 230, 200'
       outerAlpha={0.2}
-      innerScale={0.7}
+      innerScale={1}
       outerScale={5}
       clickables={[
         'a',
