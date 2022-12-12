@@ -2,6 +2,7 @@
 .travel-list-container{
     box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.55) 0px 5px 10px;
     border-radius: 10px;
+    justify-content: flex-start;
 }
 .travel-list{
     background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc500b9 100%);

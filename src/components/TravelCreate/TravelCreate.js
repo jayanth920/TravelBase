@@ -10,7 +10,7 @@ const TravelCreate = () => {
     const[imageURL,setimageURL]= useState('')
     const[foodPlace,setFoodplace]= useState('')
     const[foodDescription,setFooddescription]= useState('')
-    const[stars,setStars]= useState('')
+    const[stars,setStars]= useState(0)
     const[date,setDate]= useState('00-00-0000')
     const[weather,setWeather]= useState('')
 const baseUrl= 'https://backend-travelapp.fly.dev'
@@ -28,8 +28,8 @@ const addToBase = () => {
           },
           food:{
             place:foodPlace,
-            description:foodDescription,
-            stars:stars
+            stars:stars,
+            description:foodDescription
           },
           date:date,
           weather:weather
