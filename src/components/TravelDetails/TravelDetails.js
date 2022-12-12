@@ -2,6 +2,9 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import './TravelDetails.css'
 
+//Components
+import TravelUpdate from '../TravelUpdate/TravelUpdate'
+
 
 const TravelDetails = ({travels}) => {
 
@@ -46,6 +49,7 @@ const TravelDetails = ({travels}) => {
         <div className='elements'>Description: {travels[travelSearch].food.description}</div>
       </div>
       <button className='updateButton'>UPDATE</button>
+      <TravelUpdate id={id} />   
     </div>
   );
 }
