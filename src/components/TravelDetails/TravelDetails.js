@@ -76,6 +76,8 @@ const TravelDetails = ({travels}) => {
         <div className='elements'>Stars: {travelData && travelData[travelSearchTwo].food.stars}</div>
         <br></br>
         <div className='elements'>Description: {travelData && travelData[travelSearchTwo].food.description}</div>
+        <br></br>
+        <div>Date Updated: {travelData && travelData[travelSearchTwo].date}</div>
       </div>
       <TravelUpdate id={id} travels={travels} travelSearch={travelSearch}/>   
     </div>

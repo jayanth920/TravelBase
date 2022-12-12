@@ -18,8 +18,8 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
   const [foodPlace, setFoodPlace] = useState('')
   const [foodStars, setFoodStars] = useState('')
   const [foodDes, setFoodDes] = useState('')
-  const [date, setDate] = useState('')
-  const [weather, setWeather] = useState('')
+  const [date, setDate] = useState(travelsData[travelSearch] && travelsData[travelSearch].date)
+  const [weather, setWeather] = useState(travelsData[travelSearch] && travelsData[travelSearch].weather)
   let named = name
   let pop = population
 
@@ -32,6 +32,11 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
     } else {
       console.log('name is empty, name will not change');
       named = travelsData[travelSearch].name
+    }
+    if (population !== 0) {
+      console.log('pop is not empty');
+    } else {
+      console.log('pop is empty');
     }
     try {
         const change = await axios.put('https://backend-travelapp.fly.dev/update', {
@@ -84,7 +89,7 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
             <input placeholder='Date Entered MM-DD-YYYY' onChange={(e) => {setDate(e.target.value)}} required></input>
             <input placeholder='Weather' onChange={(e) => {setWeather(e.target.value)}} required></input>
         </form>
-        <button className='update-button' onClick={travelRefresh}>Update Recipe</button>
+        <button className='update-button' onClick={travelRefresh}>Update Destination</button>
         <Link to='/' onClick={refreshPage}><TravelDelete id={id} /></Link>
     </div>
   )
