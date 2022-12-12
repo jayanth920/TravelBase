@@ -81,14 +81,12 @@
 }
 
 .travel-list {
-  border: 2px black solid;
   margin: 20px;
   align-self: center;
   box-shadow: rgb(0 0 0 / 24%) 1px 1px 2px 0px;
   border-radius: 10px;
   padding: 5px;
   background-color: aliceblue;
-  border: 3px solid white;
   transition: 0.1s ease-in-out;
 }
 .travel-list a:hover {
@@ -106,7 +104,9 @@
   width: 400px;
 }
 p{
+  margin-left:20%;
+  margin-right: 20%;
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
-  box-shadow: rgb(0 0 0 / 24%) 1px 1px 2px 0px;
+  box-shadow: rgba(255, 247, 0, 0.55) 20px 20px 150px, rgba(255, 247, 0, 0.55) 20px 20px 100px;
 }
