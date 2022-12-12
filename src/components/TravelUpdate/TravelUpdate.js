@@ -26,6 +26,9 @@ const TravelUpdate = ({id}) => {
         _id: id
       })
 
+      const ident = {_id: id}
+      console.log(ident);
+
       const travelRefresh = async () => {
         try {
             const change = await axios.put('https://backend-travelapp.fly.dev/update', form)
@@ -39,6 +42,17 @@ const TravelUpdate = ({id}) => {
 
         newObj[e.target.name] = e.target.value
         setForm(newObj)
+        console.log(form)
+      }
+
+      const travelDelete = () => {
+        const res = axios.delete('https://backend-travelapp.fly.dev/delete', {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          data: {_id: id}
+        })
+        console.log('done');
       }
 
 
@@ -59,6 +73,7 @@ const TravelUpdate = ({id}) => {
             <input placeholder='Weather' name='weather' value={form.weather} onChange={handleChange}></input>
         </form>
         <button onClick={travelRefresh}>Update Recipe</button>
+        <button onClick={travelDelete}>Delete</button>
         <TravelDelete id={id} />
     </div>
   )
