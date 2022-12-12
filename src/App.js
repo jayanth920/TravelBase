@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     getTravels()
-  }, [])
+  }, [travels.length])
 
   console.log(travels)
 
