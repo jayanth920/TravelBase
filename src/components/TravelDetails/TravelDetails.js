@@ -43,7 +43,8 @@ const TravelDetails = ({travels}) => {
   // console.log(id);
   // console.log(travelsArr);
   console.log(travelSearch);
-  console.log(travelData && travelData[travelSearch].name);
+  console.log(travelSearchTwo);
+  console.log(travelData && travelData[travelSearchTwo].name);
 
   return (
     <div className="travel-details">
@@ -55,27 +56,27 @@ const TravelDetails = ({travels}) => {
 <br></br>
       <div className="travel-details-list">
         {/* <div className="elements">City Name: {travels[travelSearch].name}</div> */}
-        <div className="elements">City Name: {travelData && travelData[travelSearch].name}</div>
+        <div className="elements">City Name: {travelData && travelData[travelSearchTwo].name}</div>
         <br></br>
         {/* <div className='elements'>Location: {travels[travelSearch].location}</div> */}
         {/* <div className='elements'>Location: {travels[travelSearch].location}</div> */}
         <br></br>
-        <div className='elements'>Population: {travelData && travelData[travelSearch].name}</div>
+        <div className='elements'>Population: {travelData && travelData[travelSearchTwo].population}</div>
         <br></br>
-        <div className='elements'>Weather: {travelData && travelData[travelSearch].name}</div>
+        <div className='elements'>Weather: {travelData && travelData[travelSearchTwo].weather}</div>
         <br></br>
-        <div className='elements'>Places to Discover: {travelData && travelData[travelSearch].name}</div>
+        <div className='elements'>Places to Discover: {travelData && travelData[travelSearchTwo].discover.name}</div>
         <br></br>
         {/* <img
           className="discover-image"
           src={travels[travelSearch].discover.imageURL}
         ></img> */}
         <br></br>
-        <div className='elements'>Food: {travelData && travelData[travelSearch].name}</div>
+        <div className='elements'>Food: {travelData && travelData[travelSearchTwo].name}</div>
         <br></br>
-        <div className='elements'>Stars: {travelData && travelData[travelSearch].name}</div>
+        <div className='elements'>Stars: {travelData && travelData[travelSearchTwo].name}</div>
         <br></br>
-        <div className='elements'>Description: {travelData && travelData[travelSearch].name}</div>
+        <div className='elements'>Description: {travelData && travelData[travelSearchTwo].name}</div>
       </div>
       <TravelUpdate id={id} />   
     </div>
