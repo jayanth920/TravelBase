@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Home.css'
 
 
-const Home = ({travels}) => {
+const Home = ({travels, getTravels}) => {
   const [travelList, setTravelList] = useState('')
 
   const getList = () => {
@@ -21,6 +21,11 @@ const Home = ({travels}) => {
     getList()
   },[travels])
 
+  const refresh = () => {
+    setTravelList([])
+    getTravels()
+  }
+
 
 
   return (
@@ -29,6 +34,7 @@ const Home = ({travels}) => {
       <div className='travel-list-container'>
         {travelList}
       </div>
+      {/* <button onClick={refresh}>Refresh Demo</button> */}
     </div>
   )
 }

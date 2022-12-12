@@ -1,9 +1,25 @@
 import React from 'react'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-export default function Footer() {
+const Footer = ({refreshState}) => {
+  const navigate = useNavigate()
+
+
+  const reloaded = () => {
+    window.location.reload()
+  }
+
+
   return (
-    <div>
-        <h1 className='header'>&copy; 🛫🛬 TravelBase 🌎</h1>
+    <div className='footer'>
+      <p>Footer</p>
+      <button onClick={() => navigate(-1)}>Back</button>
+      <button onClick={reloaded}>Regular Load</button>
+      <button onClick={refreshState}>State Fresh</button>
+      {/* <button onClick={() => navigate(1)}>Forward</button> */}
     </div>
   )
 }
+
+export default Footer

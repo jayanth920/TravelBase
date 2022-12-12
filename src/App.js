@@ -33,6 +33,11 @@ function App() {
 
   console.log(travels)
 
+  const refreshState = () => {
+    setTravels([])
+    getTravels()
+  }
+
 
   return (
     <div>
@@ -42,13 +47,13 @@ function App() {
       </div>
 
       <Routes>
-        <Route path='/' element={<Home travels={travels} />} />
+        <Route path='/' element={<Home travels={travels} getTravels={getTravels}/>} />
         <Route path='/travels/:id' element={<TravelDetails travels={travels} />} />
         <Route path='/create' element={<TravelCreate />} />
         <Route path='/delete/:id' element={<TravelDelete />} />
       </Routes>
 
-      {/* <Footer /> */}
+      <Footer refreshState={refreshState} />
     </div>
   )
 }
