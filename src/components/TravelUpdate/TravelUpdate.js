@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import './TravelUpdate.css'
 
 // Components 
 import TravelDelete from '../TravelDelete/TravelDelete'
@@ -77,17 +78,17 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
   return (
     <div>
         <form className='recipe-update-form'>
-            <input placeholder='City Name' name='name' onChange={(e) => {setName(e.target.value)}} required></input>
-            <input placeholder='Location' name='location' onChange={(e) => {setLocation(e.target.value)}} required></input>
-            <input placeholder='Population' name='population' onChange={(e) => {setPopulation(e.target.value)}} required></input>
-            <input placeholder='Place to Discover' onChange={(e) => {setDiscoverName(e.target.value)}} required></input>
-            <input placeholder='Place Description' onChange={(e) => {setDiscoverDes(e.target.value)}} required></input>
-            <input placeholder='Place Image URL' onChange={(e) => {setDiscoverImage(e.target.value)}} required></input>
-            <input placeholder='Place to Eat' onChange={(e) => {setFoodPlace(e.target.value)}} required></input>
-            <input placeholder='Stars Rating' onChange={(e) => {setFoodStars(e.target.value)}} required></input>
-            <input placeholder='Food Place Description' onChange={(e) => {setFoodDes(e.target.value)}} required></input>
-            <input placeholder='Date Entered MM-DD-YYYY' onChange={(e) => {setDate(e.target.value)}} required></input>
-            <input placeholder='Weather' onChange={(e) => {setWeather(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='City Name' name='name' onChange={(e) => {setName(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Location' name='location' onChange={(e) => {setLocation(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Population' name='population' onChange={(e) => {setPopulation(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Place to Discover' onChange={(e) => {setDiscoverName(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Place Description' onChange={(e) => {setDiscoverDes(e.target.value)}} required></input>
+            <input className='input-elements' placeholder='Place Image URL' onChange={(e) => {setDiscoverImage(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Place to Eat' onChange={(e) => {setFoodPlace(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Stars Rating' onChange={(e) => {setFoodStars(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Food Place Description' onChange={(e) => {setFoodDes(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Date Entered MM-DD-YYYY' onChange={(e) => {setDate(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Weather' onChange={(e) => {setWeather(e.target.value)}} required></input>
         </form>
         <button className='update-button' onClick={travelRefresh}>Update Destination</button>
         <Link to='/' onClick={refreshPage}><TravelDelete id={id} /></Link>
