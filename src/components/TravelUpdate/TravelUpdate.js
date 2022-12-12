@@ -42,17 +42,17 @@ const TravelUpdate = ({id}) => {
   return (
     <div>
         <form className='recipe-update-form'>
-            <input placeholder='City Name'></input>
-            <input placeholder='Location'></input>
-            <input placeholder='Population'></input>
-            <input placeholder='Place to Discover'></input>
-            <input placeholder='Place Description'></input>
-            <input placeholder='Place Image URL'></input>
-            <input placeholder='Place to Eat'></input>
-            <input placeholder='Food Place Description'></input>
-            <input placeholder='Stars Rating'></input>
-            <input placeholder='Date Entered MM-DD-YYYY'></input>
-            <input placeholder='Weather'></input>
+            <input placeholder='City Name' value={form.name}></input>
+            <input placeholder='Location' value={form.location}></input>
+            <input placeholder='Population' value={form.population}></input>
+            <input placeholder='Place to Discover' value={form.discover.name}></input>
+            <input placeholder='Place Description' value={form.discover.description}></input>
+            <input placeholder='Place Image URL' value={form.discover.imageURL}></input>
+            <input placeholder='Place to Eat' value={form.food.place}></input>
+            <input placeholder='Stars Rating' value={form.food.stars}></input>
+            <input placeholder='Food Place Description' value={form.food.description}></input>
+            <input placeholder='Date Entered MM-DD-YYYY' value={form.date}></input>
+            <input placeholder='Weather' value={form.weather}></input>
         </form>
         <button>Update Recipe</button>
     </div>
