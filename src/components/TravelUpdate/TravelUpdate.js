@@ -77,6 +77,7 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
 
   return (
     <div>
+      <h1 className='update-title'></h1>
         <form className='recipe-update-form'>
             <input className='input-elements'placeholder='City Name' name='name' onChange={(e) => {setName(e.target.value)}} required></input>
             <input className='input-elements'placeholder='Location' name='location' onChange={(e) => {setLocation(e.target.value)}} required></input>
