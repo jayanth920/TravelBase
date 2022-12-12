@@ -10,6 +10,7 @@ import Home from './components/Home/Home.js'
 import TravelCreate from './components/TravelCreate/TravelCreate.js';
 import TravelDetails from './components/TravelDetails/TravelDetails.js'
 import TravelDelete from './components/TravelDelete/TravelDelete'
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -48,6 +49,8 @@ function App() {
         <Route path='/create' element={<TravelCreate />} />
         <Route path='/delete/:id' element={<TravelDelete />} />
       </Routes>
+
+      <Footer />
     </div>
   )
 }
