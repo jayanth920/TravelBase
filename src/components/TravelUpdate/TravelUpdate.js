@@ -41,6 +41,19 @@ const TravelUpdate = ({id}) => {
 
   return (
     <div>
+        <form className='recipe-update-form'>
+            <input placeholder='City Name'></input>
+            <input placeholder='Location'></input>
+            <input placeholder='Population'></input>
+            <input placeholder='Place to Discover'></input>
+            <input placeholder='Place Description'></input>
+            <input placeholder='Place Image URL'></input>
+            <input placeholder='Place to Eat'></input>
+            <input placeholder='Food Place Description'></input>
+            <input placeholder='Stars Rating'></input>
+            <input placeholder='Date Entered MM-DD-YYYY'></input>
+            <input placeholder='Weather'></input>
+        </form>
         <button>Update Recipe</button>
     </div>
   )

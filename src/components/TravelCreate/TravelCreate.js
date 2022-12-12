@@ -50,7 +50,7 @@ const addToBase = () => {
             <input placeholder='Population' onChange={(e) => {setPopulation(e.target.value)}}></input>
             <input placeholder='Place to Discover'onChange={(e) => {setDiscovername(e.target.value)}}></input>
             <input placeholder='Place Description'onChange={(e) => {setDiscoverdescription(e.target.value)}}></input>
-            <input placeholder='Place-Image URL'onChange={(e) => {setimageURL(e.target.value)}}></input>
+            <input placeholder='Place Image URL'onChange={(e) => {setimageURL(e.target.value)}}></input>
             <input placeholder='Place to Eat'onChange={(e) => {setFoodplace(e.target.value)}}></input>
             <input placeholder='Food Place Description'onChange={(e) => {setFooddescription(e.target.value)}}></input>
             <input placeholder='Stars for the Food place'onChange={(e) => {setStars(e.target.value)}}></input>
