@@ -47,6 +47,7 @@ const TravelUpdate = ({id}) => {
 
   return (
     <div>
+       <h1 className='update-title'>Update Form</h1>
         <form className='recipe-update-form'>
             <input className='input-elements'placeholder='City Name' name='name' value={form.name} onChange={handleChange} required></input>
             <input className='input-elements'placeholder='Location' name='location' value={form.location} onChange={handleChange} required></input>
