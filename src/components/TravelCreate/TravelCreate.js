@@ -28,8 +28,8 @@ const addToBase = () => {
           },
           food:{
             place:foodPlace,
-            description:foodDescription,
-            stars:stars
+            stars:stars,
+            description:foodDescription
           },
           date:date,
           weather:weather
