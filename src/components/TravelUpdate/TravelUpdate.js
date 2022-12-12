@@ -61,7 +61,7 @@ const TravelUpdate = ({id}) => {
             <input placeholder='Weather' name='weather' value={form.weather} onChange={handleChange}></input>
         </form>
         <button className='update-button' onClick={travelRefresh}>Update Recipe</button>
-        <TravelDelete id={id} />
+        <Link to='/'><TravelDelete id={id} /></Link>
     </div>
   )
 }
