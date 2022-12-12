@@ -3,6 +3,9 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
+// Components 
+import TravelDelete from '../TravelDelete/TravelDelete'
+
 const TravelUpdate = ({id}) => {
     const [form, setForm] = useState({
         name: '',
@@ -56,6 +59,7 @@ const TravelUpdate = ({id}) => {
             <input placeholder='Weather' name='weather' value={form.weather} onChange={handleChange}></input>
         </form>
         <button onClick={travelRefresh}>Update Recipe</button>
+        <TravelDelete id={id} />
     </div>
   )
 }
