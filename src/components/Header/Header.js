@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './Header.css'
 
 function Header() {
   return (
@@ -8,10 +9,10 @@ function Header() {
         <nav className='nav'>
           <ul className='nav-list'>
             <li>
-              <Link to="/">Home</Link>
+              <button className="Home" onClick={<Link to="/">Home</Link>}>HOME</button>
             </li>
             <li>
-              <Link to="/create">Add a Travel Destinantion!</Link>
+              <button className='Create'onClick={<Link to="/create">Add a Travel Destinantion!</Link>}>ADD A PLACE !</button>
             </li>
           </ul>
         </nav>
