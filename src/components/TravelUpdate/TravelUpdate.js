@@ -58,7 +58,7 @@ const TravelUpdate = ({id}) => {
             <input placeholder='Date Entered MM-DD-YYYY' name='date' value={form.date} onChange={handleChange}></input>
             <input placeholder='Weather' name='weather' value={form.weather} onChange={handleChange}></input>
         </form>
-        <button onClick={travelRefresh}>Update Recipe</button>
+        <button onClick={travelRefresh}>Update City</button>
         <TravelDelete id={id} />
     </div>
   )
