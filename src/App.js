@@ -31,8 +31,6 @@ function App() {
     getTravels()
   }, [])
 
-  console.log(travels.discover && travels.discover[0].name);
-  // console.log(travels[0]._id);
   console.log(travels)
 
 
