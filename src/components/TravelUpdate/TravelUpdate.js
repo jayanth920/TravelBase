@@ -20,17 +20,17 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
   const [foodDes, setFoodDes] = useState('')
   const [date, setDate] = useState('')
   const [weather, setWeather] = useState('')
-  let named = 'initial'
+  let named = name
+  let pop = population
 
   console.log(travelsData[travelSearch] && travelsData[travelSearch].name);
       
   const travelRefresh = async (e) => {
     e.preventDefault();
     if (name.trim().length !== 0) {
-      console.log('name is not empty');
+      console.log('name is not empty, will proceed with change');
     } else {
-      console.log('name is empty');
-      setName('blanked')
+      console.log('name is empty, name will not change');
       named = travelsData[travelSearch].name
     }
     try {
@@ -55,6 +55,17 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
     } catch (err) {
         console.log(err);
     }
+    setTimeout(() => {
+      window.location.reload(false)
+    }, 500)
+    console.log('updated/reload page')
+  }
+
+  function refreshPage () {
+    setTimeout(() => {
+      window.location.reload(false)
+    }, 500)
+    console.log('reloaded page');
   }
 
 
@@ -74,7 +85,7 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
             <input placeholder='Weather' onChange={(e) => {setWeather(e.target.value)}} required></input>
         </form>
         <button className='update-button' onClick={travelRefresh}>Update Recipe</button>
-        <Link to='/'><TravelDelete id={id} /></Link>
+        <Link to='/' onClick={refreshPage}><TravelDelete id={id} /></Link>
     </div>
   )
 }
