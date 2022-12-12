@@ -7,8 +7,8 @@ const TravelDelete = () => {
 
     const travelDelete = () => {
         axios({
-            method: 'delete',
-            url: 'localhost:3000/travel/:id'
+            method: 'POST',
+            url: 'https://backend-travelapp.fly.dev/delete'
         })
         .catch(err => console.log(err))
     }
