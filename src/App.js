@@ -9,6 +9,7 @@ import Header from './components/Header/Header.js'
 import Home from './components/Home/Home.js'
 import TravelCreate from './components/TravelCreate/TravelCreate.js';
 import TravelDetails from './components/TravelDetails/TravelDetails.js'
+import TravelDelete from './components/TravelDelete/TravelDelete'
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path='/' element={<Home travels={travels} />} />
         <Route path='/travels/:id' element={<TravelDetails travels={travels} />} />
         <Route path='/create' element={<TravelCreate />} />
+        <Route path='/delete/:id' element={<TravelDelete />} />
       </Routes>
     </div>
   )
