@@ -48,7 +48,7 @@ function App() {
         <Route path='/delete/:id' element={<TravelDelete />} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

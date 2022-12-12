@@ -58,8 +58,7 @@ const TravelDetails = ({travels}) => {
         {/* <div className="elements">City Name: {travels[travelSearch].name}</div> */}
         <div className="elements">City Name: {travelData && travelData[travelSearchTwo].name}</div>
         <br></br>
-        {/* <div className='elements'>Location: {travels[travelSearch].location}</div> */}
-        {/* <div className='elements'>Location: {travels[travelSearch].location}</div> */}
+        <div className='elements'>Location: {travelData && travelData[travelSearchTwo].location}</div>
         <br></br>
         <div className='elements'>Population: {travelData && travelData[travelSearchTwo].population}</div>
         <br></br>
@@ -67,10 +66,10 @@ const TravelDetails = ({travels}) => {
         <br></br>
         <div className='elements'>Places to Discover: {travelData && travelData[travelSearchTwo].discover.name}</div>
         <br></br>
-        {/* <img
+        <img
           className="discover-image"
-          src={travels[travelSearch].discover.imageURL}
-        ></img> */}
+          src={travelData && travelData[travelSearchTwo].discover.imageURL}
+        ></img>
         <br></br>
         <div className='elements'>Food: {travelData && travelData[travelSearchTwo].name}</div>
         <br></br>
