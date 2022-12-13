@@ -49,12 +49,6 @@ const TravelDetails = ({travels}) => {
   return (
     <div className='travel-container'>
       <div className="travel-details">
-        <div className="center text">
-          {/* <label className='label' data-content={travelData && travelData[travelSearchTwo].name}> */}
-            <div className='heading'>{travelData && travelData[travelSearchTwo].name}</div><br></br>
-          {/* </label> */}
-        </div>
-      <br></br>
         <div className="travel-details-list">
           {/* <div className="elements">City Name: {travels[travelSearch].name}</div> */}
           <div className="elements">City Name: {travelData && travelData[travelSearchTwo].name}</div>
