@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Space+Grotesk:wght@700&display=swap');
 .header {
   text-align: center;
+  color: white;
+  font-size: 56px;
 }
  body {
-  background-color: bisque;
+  background-color: #1b263b;
  }
 
  a:link {
   text-decoration: none;
+  color: white;
  }
 
  a:visited {
   text-decoration: none;
-  color: blue;
+  color: white;
  }
 
  a:hover {
@@ -47,6 +50,7 @@
 
 .travel-create-header {
   text-align: center;
+  color: white;
 }
 
 .travel-form-button {
@@ -77,13 +81,13 @@
   flex-wrap: wrap;
   gap: 50%;
   align-content: center;
-  background-color: black;
+  background-color: #415a77;
 }
 
 .travel-list {
   margin: 20px;
   align-self: center;
-  box-shadow: rgb(0 0 0 / 24%) 1px 1px 2px 0px;
+  box-shadow: rgba(84, 185, 38, 0.24) 1px 1px 2px 0px;
   border-radius: 10px;
   padding: 5px;
   background-color: aliceblue;
@@ -134,10 +138,11 @@ p{
 }
 
 .nav {
-  display: flex;
-  height: 10ev;;
+  /* display: flex; */
+  height: 30ev;
 }
 
 .project {
-  font-size: 28px;
+  font-size: 18px;
+  color: white;
 }

@@ -4,7 +4,7 @@ import './Header.css'
 
 function Header() {
   return (
-    <div>
+    <div className='header-container'>
         <h1 className='header'>🛫🛬 TravelBase 🌎</h1>
         <nav className='nav'>
           <ul className='nav-list'>

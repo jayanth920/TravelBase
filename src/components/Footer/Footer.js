@@ -14,9 +14,10 @@ const Footer = ({refreshState}) => {
 
   return (
     <div className='footer'>
+      
+      <button className='back' onClick={() => navigate(-1)}>Back</button>
+      <button className='reload' onClick={reloaded}>Reload</button>
       <p className='project'>PROJECT By: Nikhil Prasad, Jayanth & Naveed 🚀</p>
-      <button onClick={() => navigate(-1)}>Back</button>
-      <button onClick={reloaded}>Reload</button>
       {/* <button onClick={refreshState}>State Fresh</button> */}
       {/* <button onClick={() => navigate(1)}>Forward</button> */}
     </div>

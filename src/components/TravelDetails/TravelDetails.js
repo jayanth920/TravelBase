@@ -47,39 +47,35 @@ const TravelDetails = ({travels}) => {
   // console.log(travelData && travelData[travelSearchTwo].name);
 
   return (
-    <div className="travel-details">
-      <div className="center text">
-        <label data-content={travelData && travelData[travelSearchTwo].name}>
-          <div className='heading'>{travelData && travelData[travelSearchTwo].name}</div><br></br>
-        </label>
+    <div className='travel-container'>
+      <div className="travel-details">
+        <div className="travel-details-list">
+          {/* <div className="elements">City Name: {travels[travelSearch].name}</div> */}
+          <div className='city-name'><h1>{travelData && travelData[travelSearchTwo].name}</h1></div>
+          <br></br>
+          <div className='elements'>Location: {travelData && travelData[travelSearchTwo].location}</div>
+          <br></br>
+          <div className='elements'>Population: {travelData && travelData[travelSearchTwo].population}</div>
+          <br></br>
+          <div className='elements'>Weather: {travelData && travelData[travelSearchTwo].weather}</div>
+          <br></br>
+          <br></br>
+          <img className="discover-image"src={travelData && travelData[travelSearchTwo].discover.imageURL}></img>
+          <br></br>
+          <div className='elements'>Discover: {travelData && travelData[travelSearchTwo].discover.name}</div>
+          <br></br>
+          <div className='elements'>Stars: {travelData && travelData[travelSearchTwo].discover.stars}</div>
+          <br></br>
+          <div className='elements'>Food: {travelData && travelData[travelSearchTwo].food.place}</div>
+          <br></br>
+          <div className='elements'>Stars: {travelData && travelData[travelSearchTwo].food.stars}</div>
+          <br></br>
+          <div className='elements'>Description: {travelData && travelData[travelSearchTwo].food.description}</div>
+          <br></br>
+          <div>Date Updated: {travelData && travelData[travelSearchTwo].date}</div>
+        </div>
+        <TravelUpdate id={id} travels={travels} travelSearch={travelSearch}/>   
       </div>
-<br></br>
-      <div className="travel-details-list">
-        {/* <div className="elements">City Name: {travels[travelSearch].name}</div> */}
-        <div className="elements">City Name: {travelData && travelData[travelSearchTwo].name}</div>
-        <br></br>
-        <div className='elements'>Location: {travelData && travelData[travelSearchTwo].location}</div>
-        <br></br>
-        <div className='elements'>Population: {travelData && travelData[travelSearchTwo].population}</div>
-        <br></br>
-        <div className='elements'>Weather: {travelData && travelData[travelSearchTwo].weather}</div>
-        <br></br>
-        <br></br>
-        <img className="discover-image"src={travelData && travelData[travelSearchTwo].discover.imageURL}></img>
-        <br></br>
-        <div className='elements'>Discover: {travelData && travelData[travelSearchTwo].discover.name}</div>
-        <br></br>
-        <div className='elements'>Stars: {travelData && travelData[travelSearchTwo].discover.stars}</div>
-        <br></br>
-        <div className='elements'>Food: {travelData && travelData[travelSearchTwo].food.place}</div>
-        <br></br>
-        <div className='elements'>Stars: {travelData && travelData[travelSearchTwo].food.stars}</div>
-        <br></br>
-        <div className='elements'>Description: {travelData && travelData[travelSearchTwo].food.description}</div>
-        <br></br>
-        <div>Date Updated: {travelData && travelData[travelSearchTwo].date}</div>
-      </div>
-      <TravelUpdate id={id} travels={travels} travelSearch={travelSearch}/>   
     </div>
   );
 }
