@@ -5,7 +5,7 @@
   font-size: 56px;
 }
  body {
-  background-color: bisque;
+  background-color: #1b263b;
  }
 
  a:link {
@@ -79,13 +79,13 @@
   flex-wrap: wrap;
   gap: 50%;
   align-content: center;
-  background-color: black;
+  background-color: #415a77;
 }
 
 .travel-list {
   margin: 20px;
   align-self: center;
-  box-shadow: rgb(0 0 0 / 24%) 1px 1px 2px 0px;
+  box-shadow: rgba(84, 185, 38, 0.24) 1px 1px 2px 0px;
   border-radius: 10px;
   padding: 5px;
   background-color: aliceblue;
@@ -142,4 +142,5 @@ p{
 
 .project {
   font-size: 18px;
+  color: white;
 }

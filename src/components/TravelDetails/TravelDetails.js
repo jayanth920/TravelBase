@@ -51,7 +51,7 @@ const TravelDetails = ({travels}) => {
       <div className="travel-details">
         <div className="travel-details-list">
           {/* <div className="elements">City Name: {travels[travelSearch].name}</div> */}
-          <div><h1>{travelData && travelData[travelSearchTwo].name}</h1></div>
+          <div className='city-name'><h1>{travelData && travelData[travelSearchTwo].name}</h1></div>
           <br></br>
           <div className='elements'>Location: {travelData && travelData[travelSearchTwo].location}</div>
           <br></br>
