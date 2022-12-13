@@ -29,7 +29,7 @@
 .center{
     
     position: absolute;
-    top: 36%;
+    top: 30%;
     left: 49%;
     transform: translate(-50%, -50%);
     margin: 10px;
@@ -90,7 +90,15 @@
       transform: translate(0);
     }
   }
-  img {
-    border-radius: 10px;
-    border: 10px solid orange;
-  }
+img {
+  border-radius: 10px;
+  border: 10px solid orange;
+}
+
+.label {
+  display: flex;
+}
+
+.travel-container {
+
+}

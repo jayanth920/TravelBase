@@ -134,8 +134,8 @@ p{
 }
 
 .nav {
-  display: flex;
-  height: 10ev;;
+  /* display: flex; */
+  height: 30ev;
 }
 
 .project {

@@ -12,3 +12,7 @@
     box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.55) 0px 5px 10px;
 
     }
+
+.header-container {
+    height: auto;
+}
