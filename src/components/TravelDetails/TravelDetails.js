@@ -44,7 +44,7 @@ const TravelDetails = ({travels}) => {
   // console.log(travelsArr);
   console.log(travelSearch);
   console.log(travelSearchTwo);
-  console.log(travelData && travelData[travelSearchTwo].name);
+  // console.log(travelData && travelData[travelSearchTwo].name);
 
   return (
     <div className="travel-details">

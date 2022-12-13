@@ -7,11 +7,11 @@ import './TravelUpdate.css'
 // Components 
 import TravelDelete from '../TravelDelete/TravelDelete'
 
-const TravelUpdate = ({id, travels, travelSearch}) => {
+const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) => {
   const travelsData = travels
   console.log(travelsData, travelSearch);
   const [population, setPopulation] = useState(0)
-  const [location, setLocation] = useState('')
+  const [location, setLocation] = useState(travelsData[travelSearch] && travelsData[travelSearch].location)
   const [name, setName] = useState('')
   const [discoverName, setDiscoverName] = useState('')
   const [discoverDes, setDiscoverDes] = useState('')
@@ -23,6 +23,7 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
   const [weather, setWeather] = useState(travelsData[travelSearch] && travelsData[travelSearch].weather)
   let named = name
   let pop = population
+  let image = discoverImage
 
   console.log(travelsData[travelSearch] && travelsData[travelSearch].name);
       
@@ -39,6 +40,12 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
     } else {
       console.log('pop is empty');
     }
+    if (discoverImage.trim().length !== 0) {
+      console.log('image not empty, will change')
+    } else {
+      image = travelsData[travelSearch].discover.imageURL
+      console.log('image empty, will retain');
+    }
     try {
         const change = await axios.put('https://backend-travelapp.fly.dev/update', {
           name: named,
@@ -47,7 +54,7 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
           discover:{
             name: discoverName,
             description: discoverDes,
-            imageURL: discoverImage
+            imageURL: image
           },
           food:{
             place: foodPlace,
@@ -73,7 +80,6 @@ const TravelUpdate = ({id, travels, travelSearch}) => {
     }, 500)
     console.log('reloaded page');
   }
-
 
   return (
     <div>

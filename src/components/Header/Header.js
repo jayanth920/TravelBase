@@ -9,10 +9,10 @@ function Header() {
         <nav className='nav'>
           <ul className='nav-list'>
             <li>
-              <button className="Home" onClick={<Link to="/">Home</Link>}>HOME</button>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <button className='Create'onClick={<Link to="/create">Add a Travel Destinantion!</Link>}>ADD A PLACE !</button>
+              <Link to="/create">Add a Travel Destinantion!</Link>
             </li>
           </ul>
         </nav>
