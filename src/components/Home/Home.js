@@ -30,7 +30,6 @@ const Home = ({travels, getTravels}) => {
 
   return (
     <div className='home'>
-      <p>Welcome Home</p>
       <div className='travel-list-container'>
         {travelList}
       </div>

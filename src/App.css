@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Space+Grotesk:wght@700&display=swap');
 .header {
   text-align: center;
+  color: white;
+  font-size: 56px;
 }
  body {
   background-color: bisque;
@@ -139,5 +141,5 @@ p{
 }
 
 .project {
-  font-size: 28px;
+  font-size: 18px;
 }
