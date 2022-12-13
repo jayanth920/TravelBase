@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 const TravelCreate = () => {
     const[name,setName]= useState('')
     const[location,setLocation]= useState('')
@@ -23,7 +24,7 @@ const addToBase = () => {
           population:population,
           discover:{
             name:discoverName,
-            description:discoverDescription,
+            stars:discoverDescription,
             imageURL:imageURL
           },
           food:{
@@ -49,14 +50,14 @@ const addToBase = () => {
             <input placeholder='Location' onChange={(e) => {setLocation(e.target.value)}}></input>
             <input placeholder='Population' onChange={(e) => {setPopulation(e.target.value)}}></input>
             <input placeholder='Place to Discover'onChange={(e) => {setDiscovername(e.target.value)}}></input>
-            <input placeholder='Place Description'onChange={(e) => {setDiscoverdescription(e.target.value)}}></input>
+            <input placeholder='Place Rating'onChange={(e) => {setDiscoverdescription(e.target.value)}}></input>
             <input placeholder='Place Image URL'onChange={(e) => {setimageURL(e.target.value)}}></input>
             <input placeholder='Place to Eat'onChange={(e) => {setFoodplace(e.target.value)}}></input>
             <input placeholder='Food Place Description'onChange={(e) => {setFooddescription(e.target.value)}}></input>
             <input placeholder='Stars for the Food place'onChange={(e) => {setStars(e.target.value)}}></input>
             <input placeholder='Date Entered MM-DD-YYYY'onChange={(e) => {setDate(e.target.value)}}></input>
             <input placeholder='Weather' onChange={(e) => {setWeather(e.target.value)}}></input>
-            <button onClick={addToBase} className='travel-form-button'>Submit</button>
+            <Link to='/'><button onClick={addToBase} className='travel-form-button'>Submit</button></Link>
         </form>
     </div>
   )
