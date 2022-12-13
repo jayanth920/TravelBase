@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 .travel-details-list{
     background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc500b9 100%);
@@ -25,6 +26,7 @@
 .heading{
     background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc500b9 100%);
     box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    font-size: 40px;
 }
 .center{
     
@@ -99,6 +101,3 @@ img {
   display: flex;
 }
 
-.travel-container {
-
-}
