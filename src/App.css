@@ -133,3 +133,7 @@ p{
   text-align: center;
 }
 
+.nav {
+  display: flex;
+  height: 10ev;;
+}
