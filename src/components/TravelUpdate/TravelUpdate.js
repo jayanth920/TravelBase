@@ -27,6 +27,8 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
   let discName = discoverName
   let discStar = discoverStar
   let foodLocation = foodPlace
+  let foodRating = foodStars
+  let foodStory = foodDes
 
   console.log(travelsData[travelSearch] && travelsData[travelSearch].name);
       
@@ -67,6 +69,18 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
       foodLocation = travelsData[travelSearch].food.place
       console.log('food place empty, will retain');
     }
+    if (foodStars.trim().length !== 0) {
+      console.log('food stars is not empty, will update');
+    } else {
+      foodRating = travelsData[travelSearch].food.stars
+      console.log('food stars is empty, will retain');
+    }
+    if (foodDes.trim().length !==0) {
+      console.log('food description is not empty, will update');
+    } else {
+      foodStory = travelsData[travelSearch].food.description
+      console.log('food description empty, will retain');
+    }
     try {
         const change = await axios.put('https://backend-travelapp.fly.dev/update', {
           name: named,
@@ -79,8 +93,8 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
           },
           food:{
             place: foodLocation,
-            stars: foodStars,
-            description:foodDes
+            stars: foodRating,
+            description:foodStory
           },
           date: date,
           weather: weather,
