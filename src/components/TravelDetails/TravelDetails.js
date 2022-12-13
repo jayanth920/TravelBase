@@ -5,11 +5,13 @@ import axios from 'axios'
 
 //Components
 import TravelUpdate from '../TravelUpdate/TravelUpdate'
+import Map from '../Map/Map';
 
 
-const TravelDetails = ({travels}) => {
+const TravelDetails = ({travels, setLocation}) => {
 
   const [travelData, setTravelData] = useState()
+
 
   const getTravels =  async () => {
     const response = await axios({
@@ -27,7 +29,7 @@ const TravelDetails = ({travels}) => {
 
  console.log(travelData);
 //  console.log(travelData && travelData[0].name);
- console.log(travels);
+ console.log(travels[10].population);
 //  console.log(travelData);
 
   const {id} = useParams()
@@ -44,7 +46,15 @@ const TravelDetails = ({travels}) => {
   // console.log(travelsArr);
   console.log(travelSearch);
   console.log(travelSearchTwo);
-  // console.log(travelData && travelData[travelSearchTwo].name);
+  console.log(travelData && travelData[travelSearchTwo].population, travelData && travelData[travelSearchTwo].food.stars);
+
+    const location = {
+    address: 'Houston, TX',
+    lat: travels[10].population,
+    lng: -95.383056,
+  }
+
+
 
   return (
     <div className="travel-details">
@@ -79,7 +89,8 @@ const TravelDetails = ({travels}) => {
         <br></br>
         <div>Date Updated: {travelData && travelData[travelSearchTwo].date}</div>
       </div>
-      <TravelUpdate id={id} travels={travels} travelSearch={travelSearch}/>   
+      <TravelUpdate id={id} travels={travels} travelSearch={travelSearch}/>  
+      <Map location={location} zoomLevel={6} /> 
     </div>
   );
 }

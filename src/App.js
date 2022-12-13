@@ -16,15 +16,20 @@ import Map from './components/Map/Map';
 
 // Variables
 
-const location = {
-  address: '1600 Amphitheatre Parkway, Mountain View, california.',
-  lat: 37.42216,
-  lng: -122.08427,
+const locationOne = {
+  address: 'Houston, TX',
+  lat: 29.762778,
+  lng: -95.383056,
 }
 
 
 function App() {
   const [travels, setTravels] = useState([])
+  const [location, setLocation] = useState({
+    address: 'Houston, TX',
+    lat: 29.762778,
+    lng: -95.383056,
+  })
 
 
   const getTravels =  async () => {
@@ -58,13 +63,12 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home travels={travels} getTravels={getTravels}/>} />
-        <Route path='/travels/:id' element={<TravelDetails travels={travels} />} />
+        <Route path='/travels/:id' element={<TravelDetails travels={travels} setLocation={setLocation}/>} />
         <Route path='/create' element={<TravelCreate />} />
         <Route path='/delete/:id' element={<TravelDelete />} />
       </Routes>
 
       <Footer refreshState={refreshState} />
-      <Map location={location} zoomLevel={17} />
     </div>
   )
 }

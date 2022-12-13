@@ -141,3 +141,7 @@ p{
 .project {
   font-size: 28px;
 }
+
+.map {
+  width: 100%
+}
