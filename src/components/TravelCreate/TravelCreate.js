@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import './TravelCreate.css'
+
 const TravelCreate = () => {
     const[name,setName]= useState('')
     const[location,setLocation]= useState('')
@@ -63,7 +65,7 @@ function refreshPage () {
             <input placeholder='Stars for the Food place'onChange={(e) => {setStars(e.target.value)}}></input>
             <input placeholder='Date Entered MM-DD-YYYY'onChange={(e) => {setDate(e.target.value)}}></input>
             <input placeholder='Weather' onChange={(e) => {setWeather(e.target.value)}}></input>
-            <Link to='/'><button onClick={addToBase} className='travel-form-button'>Submit</button></Link>
+            <Link to='/' activeClassName='travel-form-button'><button onClick={addToBase} className='travel-form-button'>Submit</button></Link>
         </form>
     </div>
   )
