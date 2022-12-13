@@ -137,3 +137,7 @@ p{
   display: flex;
   height: 10ev;;
 }
+
+.project {
+  font-size: 28px;
+}
