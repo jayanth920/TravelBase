@@ -11,6 +11,16 @@ import TravelCreate from './components/TravelCreate/TravelCreate.js';
 import TravelDetails from './components/TravelDetails/TravelDetails.js'
 import TravelDelete from './components/TravelDelete/TravelDelete'
 import Footer from './components/Footer/Footer';
+import Map from './components/Map/Map';
+
+
+// Variables
+
+const location = {
+  address: '1600 Amphitheatre Parkway, Mountain View, california.',
+  lat: 37.42216,
+  lng: -122.08427,
+}
 
 
 function App() {
@@ -54,6 +64,7 @@ function App() {
       </Routes>
 
       <Footer refreshState={refreshState} />
+      <Map location={location} zoomLevel={17} />
     </div>
   )
 }
