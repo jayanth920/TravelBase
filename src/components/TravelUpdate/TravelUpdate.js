@@ -25,6 +25,7 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
   let pop = population
   let image = discoverImage
   let discName = discoverName
+  let discStar = discoverStar
 
   console.log(travelsData[travelSearch] && travelsData[travelSearch].name);
       
@@ -53,6 +54,12 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
       discName = travelsData[travelSearch].discover.name
       console.log('discover name empty, will retain');
     }
+    if (discoverStar.trim().length !==0) {
+      console.log('discover star not empty, will change');
+    } else {
+      discStar = travelsData[travelSearch].discover.stars
+      console.log('discover star empty, will retain');
+    }
     try {
         const change = await axios.put('https://backend-travelapp.fly.dev/update', {
           name: named,
@@ -60,7 +67,7 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
           population: population,
           discover:{
             name: discName,
-            stars: discoverStar,
+            stars: discStar,
             imageURL: image
           },
           food:{
