@@ -67,9 +67,11 @@ const TravelDetails = ({travels}) => {
         {/* <div className='elements'>Places to Discover: {travelData && travelData[travelSearchTwo].discover.name}</div> */}
         <br></br>
         <img
-          className="discover-image"
-          src={travelData && travelData[travelSearchTwo].discover.imageURL}
-        ></img>
+          className="discover-image"src={travelData && travelData[travelSearchTwo].discover.imageURL}></img>
+        <br></br>
+        <div className='elements'>Discover: {travelData && travelData[travelSearchTwo].discover.name}</div>
+        <br></br>
+        <div className='elements'>Stars: {travelData && travelData[travelSearchTwo].discover.stars}</div>
         <br></br>
         <div className='elements'>Food: {travelData && travelData[travelSearchTwo].food.place}</div>
         <br></br>

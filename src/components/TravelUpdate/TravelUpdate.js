@@ -14,7 +14,7 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
   const [location, setLocation] = useState(travelsData[travelSearch] && travelsData[travelSearch].location)
   const [name, setName] = useState('')
   const [discoverName, setDiscoverName] = useState('')
-  const [discoverDes, setDiscoverDes] = useState('')
+  const [discoverStar, setDiscoverStar] = useState('')
   const [discoverImage, setDiscoverImage] = useState('')
   const [foodPlace, setFoodPlace] = useState('')
   const [foodStars, setFoodStars] = useState('')
@@ -24,6 +24,7 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
   let named = name
   let pop = population
   let image = discoverImage
+  let discName = discoverName
 
   console.log(travelsData[travelSearch] && travelsData[travelSearch].name);
       
@@ -46,14 +47,20 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
       image = travelsData[travelSearch].discover.imageURL
       console.log('image empty, will retain');
     }
+    if (discoverName.trim().length !==0) {
+      console.log('discover name not empty, will change');
+    } else {
+      discName = travelsData[travelSearch].discover.name
+      console.log('discover name empty, will retain');
+    }
     try {
         const change = await axios.put('https://backend-travelapp.fly.dev/update', {
           name: named,
           location: location,
           population: population,
           discover:{
-            name: discoverName,
-            description: discoverDes,
+            name: discName,
+            stars: discoverStar,
             imageURL: image
           },
           food:{
@@ -89,7 +96,7 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
             <input className='input-elements'placeholder='Location' name='location' onChange={(e) => {setLocation(e.target.value)}} required></input>
             <input className='input-elements'placeholder='Population' name='population' onChange={(e) => {setPopulation(e.target.value)}} required></input>
             <input className='input-elements'placeholder='Place to Discover' onChange={(e) => {setDiscoverName(e.target.value)}} required></input>
-            <input className='input-elements'placeholder='Place Description' onChange={(e) => {setDiscoverDes(e.target.value)}} required></input>
+            <input className='input-elements'placeholder='Place Rating' onChange={(e) => {setDiscoverStar(e.target.value)}} required></input>
             <input className='input-elements' placeholder='Place Image URL' onChange={(e) => {setDiscoverImage(e.target.value)}} required></input>
             <input className='input-elements'placeholder='Place to Eat' onChange={(e) => {setFoodPlace(e.target.value)}} required></input>
             <input className='input-elements'placeholder='Stars Rating' onChange={(e) => {setFoodStars(e.target.value)}} required></input>
