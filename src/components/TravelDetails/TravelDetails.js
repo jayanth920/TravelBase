@@ -49,8 +49,8 @@ const TravelDetails = ({travels}) => {
   return (
     <div className="travel-details">
       <div className="center text">
-        <label data-content="Location Details">
-          <div className='heading'>Location Details</div><br></br>
+        <label data-content={travelData && travelData[travelSearchTwo].name}>
+          <div className='heading'>{travelData && travelData[travelSearchTwo].name}</div><br></br>
         </label>
       </div>
 <br></br>
