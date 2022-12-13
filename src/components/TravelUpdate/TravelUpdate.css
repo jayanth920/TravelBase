@@ -1,0 +1,42 @@
+.update-title{
+    font-family: 'Unbounded',cursive;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+::placeholder { 
+    color: black;
+    opacity: 0.75;
+  }
+  .recipe-update-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;;
+  }
+.input-elements{
+    font-family: 'Unbounded',cursive;
+    margin:5px;
+    border-radius: 10px;
+    color: black;
+    height:50px;
+    width: 20rem;
+    font-size: large;
+    font-weight: bold;
+    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc500b9 100%);
+}
+.update-button{
+    border-radius: 5px;
+    font-family: 'Unbounded',cursive;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    height:3rem;
+    width:10rem;
+
+}
+.delete{
+    border-radius: 5px;
+    font-family: 'Unbounded',cursive;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    height:3rem;
+    width:10rem;
+}

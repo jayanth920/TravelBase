@@ -1,21 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-const TravelDelete = () => {
-    const id = useParams()
+const TravelDelete = ({id}) => {
 
-    const travelDelete = () => {
-        axios({
-            method: 'delete',
-            url: 'localhost:3000/travel/:id'
-        })
-        .catch(err => console.log(err))
-    }
+  const ident = {_id: id}
+  // console.log(ident);
+
+
+  const removeTravel = () => {
+    const res = axios.delete('https://backend-travelapp.fly.dev/delete', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: {_id: id}
+    })
+    console.log('delete');
+  }
 
   return (
     <div>
-        <button className='delete'>Delete</button>
+        <button className='delete' onClick={removeTravel}>Delete</button>
     </div>
   )
 }

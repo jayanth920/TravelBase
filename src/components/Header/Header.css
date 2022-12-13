@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+.Home{
+    font-family: 'Unbounded',cursive;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.55) 0px 5px 10px;
+
+}
+
+.Create{
+    font-family: 'Unbounded',cursive;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.55) 0px 5px 10px;
+
+    }

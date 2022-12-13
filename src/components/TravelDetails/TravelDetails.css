@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+.travel-details{
+    color:aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.travel-details-list{
+    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc500b9 100%);
+    color: black;
+    font-family: 'Unbounded', cursive;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.55) 0px 5px 10px;
+    border-radius: 10px;
+    margin:5px;
+    padding-top: 15%;
+}
+.elements{
+    margin:10px;
+    border-radius: 7px;
+    background-color: white;
+    height: 20px;
+    display: inline-block;
+}
+.heading{
+    background: linear-gradient(325deg,  #6f00fc 0%,#fc7900 50%,#fcc500b9 100%);
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.center{
+    
+    position: absolute;
+    top: 36%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    margin: 10px;
+  }
+  .text label{
+    font-size: 50px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  label div{
+    background-color: black;
+    top:-37px;
+    border-radius:10px ;
+    position: relative;
+    color: white;
+    z-index: 2;
+  }
+  label div:hover{
+    filter: blur(0.2px);
+  }
+  .text label::before,
+  .text label::after{
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+  }
+  .text:hover label::before,
+  .text:hover label::after{
+    visibility: visible;
+  }
+  .text:hover label::before{
+    color: rgba(255,0,188,.8);
+    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;
+  }
+  .text:hover label::after{
+    color: rgba(0,255,255,.8);
+    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite;
+  }
+  @keyframes glitch {
+    0%{
+      transform: translate(0);
+    }
+    20%{
+      transform: translate(-3px, 3px);
+    }
+    40%{
+      transform: translate(-3px, -3px);
+    }
+    60%{
+      transform: translate(3px, 3px);
+    }
+    80%{
+      transform: translate(3px, -3px);
+    }
+    100%{
+      transform: translate(0);
+    }
+  }
+  img {
+    border-radius: 10px;
+    border: 10px solid orange;
+  }

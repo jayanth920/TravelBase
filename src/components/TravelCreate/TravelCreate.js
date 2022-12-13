@@ -1,40 +1,49 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 const TravelCreate = () => {
-    const [newTravel, setNewTravel] = useState({
-        name: '',
-        location: '',
-        population: '',
-        discover: [{
-            name: String,
-            description: String,
-            imageURL: String
-        }],
-        food: [{
-            place: String,
-            stars: Number,
-            description: String
-        }],
-        date: Date,
-        weather: String
-    })
+    const[name,setName]= useState('')
+    const[location,setLocation]= useState('')
+    const[population,setPopulation]= useState(0)
+    const[discoverName,setDiscovername]= useState('')
+    const[discoverDescription,setDiscoverdescription]= useState('')
+    const[imageURL,setimageURL]= useState('')
+    const[foodPlace,setFoodplace]= useState('')
+    const[foodDescription,setFooddescription]= useState('')
+    const[stars,setStars]= useState(0)
+    const[date,setDate]= useState('00-00-0000')
+    const[weather,setWeather]= useState('')
+const baseUrl= 'https://backend-travelapp.fly.dev'
+const addToBase = () => {
 
-    
-const travelCreate = async () => {
-    try {
-        const newCreate = await axios.post('url', newTravel)
-    }
-    catch (err) {
-        console.log(err);
-    }
+    axios
+        .post(`${baseUrl}/add`, {
+          name:name,
+          location:location,
+          population:population,
+          discover:{
+            name:discoverName,
+            stars:discoverDescription,
+            imageURL:imageURL
+          },
+          food:{
+            place:foodPlace,
+            stars:stars,
+            description:foodDescription
+          },
+          date:date,
+          weather:weather
+        })
+        refreshPage()
 }
 
-const handleCreate = (e) => {
-    const newTravelData = {...newTravel}
+function refreshPage () {
+  setTimeout(() => {
+    window.location.reload(false)
+  }, 500)
+  console.log('reloaded page');
 }
-
 
   return (
     <div className='travel-create'>
@@ -43,16 +52,19 @@ const handleCreate = (e) => {
         
 
         <form className='travel-form'>
-            <input placeholder='City Name'></input>
-            <input placeholder='GPS Coordinates'></input>
-            <input placeholder='Population'></input>
-            <input placeholder='Places to Discover'></input>
-            <input placeholder='Places to Eat'></input>
-            <input placeholder='Date Entered MM-DD-YYYY'></input>
-            <input placeholder='Weather' ></input>
-            <button className='travel-form-button'>Submit</button>
+            <input placeholder='City Name' onChange={(e) => {setName(e.target.value)}} required></input>
+            <input placeholder='Location' onChange={(e) => {setLocation(e.target.value)}}></input>
+            <input placeholder='Population' onChange={(e) => {setPopulation(e.target.value)}}></input>
+            <input placeholder='Place to Discover'onChange={(e) => {setDiscovername(e.target.value)}}></input>
+            <input placeholder='Place Rating'onChange={(e) => {setDiscoverdescription(e.target.value)}}></input>
+            <input placeholder='Place Image URL'onChange={(e) => {setimageURL(e.target.value)}}></input>
+            <input placeholder='Place to Eat'onChange={(e) => {setFoodplace(e.target.value)}}></input>
+            <input placeholder='Food Place Description'onChange={(e) => {setFooddescription(e.target.value)}}></input>
+            <input placeholder='Stars for the Food place'onChange={(e) => {setStars(e.target.value)}}></input>
+            <input placeholder='Date Entered MM-DD-YYYY'onChange={(e) => {setDate(e.target.value)}}></input>
+            <input placeholder='Weather' onChange={(e) => {setWeather(e.target.value)}}></input>
+            <Link to='/'><button onClick={addToBase} className='travel-form-button'>Submit</button></Link>
         </form>
-
     </div>
   )
 }

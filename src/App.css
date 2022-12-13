@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Space+Grotesk:wght@700&display=swap');
 .header {
   text-align: center;
 }
@@ -72,14 +73,14 @@
 
 .travel-list-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 50%;
   align-content: center;
+  background-color: black;
 }
 
 .travel-list {
-  border: 2px black solid;
   margin: 20px;
   align-self: center;
   box-shadow: rgb(0 0 0 / 24%) 1px 1px 2px 0px;
@@ -101,4 +102,42 @@
 .discover-image {
   height: 100%;
   width: 400px;
+}
+p{
+  margin-left:20%;
+  margin-right: 20%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  box-shadow: rgba(255, 247, 0, 0.55) 20px 20px 150px, rgba(255, 247, 0, 0.55) 20px 20px 100px;
+}
+
+.delete {
+  transition-duration: 0.4s;
+}
+
+.delete:hover {
+  background-color: red;
+  color: white;
+}
+
+.update-button {
+  transition-duration: 0.4s;
+}
+
+.update-button:hover {
+  background-color: #4CAf50;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  height: 10ev;;
+}
+
+.project {
+  font-size: 28px;
 }
