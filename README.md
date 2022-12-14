@@ -53,7 +53,7 @@ React Frontend for TravelBase app.
 
 Project 3 General Assembly. 
 
-Team: Nikhil Prasad, Jayanth Gajula, Naveed Ahmad.
+## Built by: Nikhil Prasad, Jayanth Gajula, and Naveed Ahmad.
 
 ## Getting Started with Create React App
 
