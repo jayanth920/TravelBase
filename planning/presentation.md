@@ -7,29 +7,29 @@ your presentation ahead of time and practice running through it at least once.
 Five minutes will then be allotted for questions from the class. Take turns
 answering questions during the Q & A. We suggest the following structure:
 
-## Introduction
+## Introduction - NIkhil
 
 - What's your app called?
 - Who are your group members? Who had which responsibilities?
 - Why is it useful? What is your "pitch"?
 
-## Demonstrating Your App
+## Demonstrating Your App  -Naveed
 
 - What are the integral features of your app?
 
-## Demonstrating Your Code
+## Demonstrating Your Code - Front/Nikhil Back/Jay
 
 - What was the most difficult part?
 - What did you learn?
 - What are you most proud of?
 
-## The Planning Process
+## The Planning Process - Naveed
 
 - How did you arrive at this idea?
 - How did you decide who would have which responsibilities?
 - What would you change about your planning process?
 
-## The Workflow
+## The Workflow - Jay
 
 - What
   [Git Workflow](https://git.generalassemb.ly/seir-ten3/git-teams)
@@ -37,13 +37,13 @@ answering questions during the Q & A. We suggest the following structure:
 - What did you like about this workflow; what did you dislike?
 - Did you run into any challenges with this workflow? How did you solve them?
 
-## The Week
+## The Week - Nikhil
 
 - What was your week like?
 - Did you feel the Emotional Cycle of Change?
 - How did you work together?
 
-## Highs and Lows
+## Highs and Lows - Naveed
 
 - What worked well?
 - What didn't?
