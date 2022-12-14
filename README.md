@@ -39,7 +39,6 @@ This app utilizes ReactJS ([Frontend Repo](https://github.com/nprasad2077/front-
 | TravelDetails | Maps out correct city data | 
 | TravelUpdate | Handles update of city data | 
 | AnimCursor | Custom cursor for app | 
-| Search | This feature is under construction | 
 
 ## Additional Libraries
 
