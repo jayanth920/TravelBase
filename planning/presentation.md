@@ -17,7 +17,7 @@ answering questions during the Q & A. We suggest the following structure:
 
 - What are the integral features of your app?
 
-## Demonstrating Your Code - Front/Nikhil Back/Jay
+## Demonstrating Your Code -  Back/Jay    Front/Nikhil
 
 - What was the most difficult part?
 - What did you learn?
