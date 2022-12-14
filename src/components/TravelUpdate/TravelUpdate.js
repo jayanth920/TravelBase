@@ -107,14 +107,14 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
     setTimeout(() => {
       window.location.reload(false)
     }, 500)
-    console.log('updated/reload page')
+    // console.log('updated/reload page')
   }
 
   function refreshPage () {
     setTimeout(() => {
       window.location.reload(false)
     }, 500)
-    console.log('reloaded page');
+    // console.log('reloaded page');
   }
 
   return (
