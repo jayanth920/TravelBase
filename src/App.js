@@ -16,7 +16,6 @@ import Footer from './components/Footer/Footer';
 function App() {
   const [travels, setTravels] = useState([])
 
-
   const getTravels =  async () => {
      const response = await axios({
       method: 'get',
@@ -31,13 +30,10 @@ function App() {
     getTravels()
   }, [])
 
-  // console.log(travels)
-
   const refreshState = () => {
     setTravels([])
     getTravels()
   }
-
 
   return (
     <div>
@@ -45,7 +41,7 @@ function App() {
       <div className='app-body'>
         <Header />
       </div>
-
+      
       <Routes>
         <Route path='/' element={<Home travels={travels} getTravels={getTravels}/>} />
         <Route path='/travels/:id' element={<TravelDetails travels={travels} />} />

@@ -42,7 +42,6 @@ function refreshPage () {
   setTimeout(() => {
     window.location.reload(false)
   }, 500)
-  // console.log('reloaded page');
 }
 
   return (

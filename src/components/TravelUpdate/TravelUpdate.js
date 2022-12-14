@@ -9,7 +9,6 @@ import TravelDelete from '../TravelDelete/TravelDelete'
 
 const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) => {
   const travelsData = travels
-  // console.log(travelsData, travelSearch);
   const [population, setPopulation] = useState(0)
   const [location, setLocation] = useState(travelsData[travelSearch] && travelsData[travelSearch].location)
   const [name, setName] = useState('')
@@ -30,57 +29,55 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
   let foodRating = foodStars
   let foodStory = foodDes
 
-  // console.log(travelsData[travelSearch] && travelsData[travelSearch].name);
+
       
   const travelRefresh = async (e) => {
     e.preventDefault();
     if (name.trim().length !== 0) {
-      // console.log('name is not empty, will proceed with change');
     } else {
-      // console.log('name is empty, name will not change');
       named = travelsData[travelSearch].name
     }
     if (population !== 0) {
-      // console.log('pop is not empty');
+
     } else {
-      // console.log('pop is empty');
+
       pop = travelsData[travelSearch].population
     }
     if (discoverImage.trim().length !== 0) {
-      // console.log('image not empty, will change')
+
     } else {
       image = travelsData[travelSearch].discover.imageURL
-      // console.log('image empty, will retain');
+
     }
     if (discoverName.trim().length !==0) {
-      // console.log('discover name not empty, will change');
+
     } else {
       discName = travelsData[travelSearch].discover.name
-      // console.log('discover name empty, will retain');
+
     }
     if (discoverStar.trim().length !==0) {
-      // console.log('discover star not empty, will change');
+
     } else {
       discStar = travelsData[travelSearch].discover.stars
-      // console.log('discover star empty, will retain');
+
     }
     if (foodPlace.trim().length !==0) {
-      // console.log('food place not empty, will change');
+
     } else {
       foodLocation = travelsData[travelSearch].food.place
-      // console.log('food place empty, will retain');
+
     }
     if (foodStars.trim().length !== 0) {
-      // console.log('food stars is not empty, will update');
+
     } else {
       foodRating = travelsData[travelSearch].food.stars
-      // console.log('food stars is empty, will retain');
+
     }
     if (foodDes.trim().length !==0) {
-      // console.log('food description is not empty, will update');
+
     } else {
       foodStory = travelsData[travelSearch].food.description
-      // console.log('food description empty, will retain');
+
     }
     try {
         const change = await axios.put('https://backend-travelapp.fly.dev/update', {
@@ -107,14 +104,12 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
     setTimeout(() => {
       window.location.reload(false)
     }, 500)
-    // console.log('updated/reload page')
   }
 
   function refreshPage () {
     setTimeout(() => {
       window.location.reload(false)
     }, 500)
-    // console.log('reloaded page');
   }
 
   return (
