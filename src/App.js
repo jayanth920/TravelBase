@@ -31,7 +31,7 @@ function App() {
     getTravels()
   }, [])
 
-  console.log(travels)
+  // console.log(travels)
 
   const refreshState = () => {
     setTravels([])

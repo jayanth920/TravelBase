@@ -25,15 +25,15 @@ const TravelDetails = ({travels}) => {
   getTravels()
 }, [])
 
- console.log(travelData);
+//  console.log(travelData);
 //  console.log(travelData && travelData[0].name);
- console.log(travels);
+//  console.log(travels);
 //  console.log(travelData);
 
   const {id} = useParams()
   const travelsArr = travels
   const travelsArrTwo = travelData
-  console.log(travelsArr);
+  // console.log(travelsArr);
   // console.log(travelsArrTwo);
 
   const travelSearch = travelData && travelsArr.findIndex(travel => travel._id == id)
@@ -42,8 +42,8 @@ const TravelDetails = ({travels}) => {
 
   // console.log(id);
   // console.log(travelsArr);
-  console.log(travelSearch);
-  console.log(travelSearchTwo);
+  // console.log(travelSearch);
+  // console.log(travelSearchTwo);
   // console.log(travelData && travelData[travelSearchTwo].name);
 
   return (
