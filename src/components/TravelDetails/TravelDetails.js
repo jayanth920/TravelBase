@@ -6,7 +6,6 @@ import axios from 'axios'
 //Components
 import TravelUpdate from '../TravelUpdate/TravelUpdate'
 
-
 const TravelDetails = ({travels}) => {
 
   const [travelData, setTravelData] = useState()
@@ -25,26 +24,12 @@ const TravelDetails = ({travels}) => {
   getTravels()
 }, [])
 
-//  console.log(travelData);
-//  console.log(travelData && travelData[0].name);
-//  console.log(travels);
-//  console.log(travelData);
-
   const {id} = useParams()
   const travelsArr = travels
   const travelsArrTwo = travelData
-  // console.log(travelsArr);
-  // console.log(travelsArrTwo);
 
   const travelSearch = travelData && travelsArr.findIndex(travel => travel._id == id)
   const travelSearchTwo = travelData && travelsArrTwo.findIndex(travel => travel._id == id)
-
-
-  // console.log(id);
-  // console.log(travelsArr);
-  // console.log(travelSearch);
-  // console.log(travelSearchTwo);
-  // console.log(travelData && travelData[travelSearchTwo].name);
 
   return (
     <div className='travel-container'>
