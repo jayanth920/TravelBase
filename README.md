@@ -8,47 +8,44 @@ This app utilizes ReactJS ([Frontend Repo](https://github.com/nprasad2077/front-
 
 ## Project Links
 
-[Deployed Frontend](https://front-end-travel-app.vercel.app/)
-[Deployed Backend](https://backend-travelapp.fly.dev)
+[Deployed Site](https://sos-tech.vercel.app/)
 
 ## Wireframes & Component Hierarchy
 
-[req-res cycle diagram](https://media.git.generalassemb.ly/user/45667/files/83861bad-6fae-4c47-9d73-0fc8d3f12986)
+[Wireframe](https://photos.app.goo.gl/pofYeJG8WM3Gj2s39)
 
 ## MVP 
 
-- want to be able to see popular cities in the US for travelling
-- want to see some points of interest in that city
-- want to find some good places to eat
+AAU, I want to see what SOS Technologies does
+AAU, I want to be able to contact the company about possible work
+AAU, I want to see possible job openings
+
 
 ## Post-MVP
 
-- want to see what the weather is in the city
-- want to see a map of the city so I can plan my day
+AAU, I want to be able to send in my resume (stretch)
+AAU, I want to be able to upload sample files from a project to send with my contact request (Stretch)
 
 ## Components
 
 | Component | Description | 
 | --- | :---: |  
-| App | This will make the initial data pull and include React Router | 
+| App | Main app component | 
 | Header | This will render the header | 
 | Footer | This will render the footer | 
-| Home | This will render the home page | 
-| TravelCreate | Handles creation of new city data | 
-| TravelDelete | Handles deletion of city data | 
-| TravelDetails | Maps out correct city data | 
-| TravelUpdate | Handles update of city data | 
-| AnimCursor | Custom cursor for app | 
+| Home | Welcome Page | 
+| Project | creates showcase of projects | 
+| About | About page | 
+| Contact | Contact form and submission handler | 
 
 ## Additional Libraries
 
-This project utilizes axios and react-router-dom in addition to the MERN stack. 
+This project utilizes a hash link react router to properly scroll to page segments.  
 
 ## Issues and Resolutions
 
+I had trouble with content overflow on the carousel component initially created to house Projects. Due to time constraints, ended up taking the carousel out and replaced with static gallery. 
 
+Project 4 for General Assembly. 
 
-Project 3 for General Assembly. 
-
-## Built by: Nikhil Prasad, Jayanth Gajula, and Naveed Ahmad.
 
