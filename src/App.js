@@ -19,7 +19,7 @@ function App() {
   const getTravels =  async () => {
      const response = await axios({
       method: 'get',
-      url: 'https://backend-travelapp.fly.dev/'
+      url: 'https://travelbase-backend.onrender.com/'
     })
     .then(res => 
       setTravels(res.data))
