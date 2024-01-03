@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './TravelUpdate.css'
 
 // Components 
@@ -80,7 +80,7 @@ const TravelUpdate = ({id, travels, travelSearch, getTravels, setTravelData}) =>
 
     }
     try {
-        const change = await axios.put('https://backend-travelapp.fly.dev/update', {
+        await axios.put('https://travelbase-backend.onrender.com/update', {
           name: named,
           location: location,
           population: pop,
