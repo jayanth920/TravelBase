@@ -1,15 +1,9 @@
-import React, { useState } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
 
 const TravelDelete = ({id}) => {
 
-  const ident = {_id: id}
-  // console.log(ident);
-
-
   const removeTravel = () => {
-    const res = axios.delete('https://backend-travelapp.fly.dev/delete', {
+    axios.delete('https://travelbase-backend.onrender.com/delete', {
       headers: {
         'Content-Type': 'application/json'
       },
