@@ -14,7 +14,7 @@ const TravelCreate = () => {
     const[stars,setStars]= useState(0)
     const[date,setDate]= useState('00-00-0000')
     const[weather,setWeather]= useState('')
-const baseUrl= 'https://backend-travelapp.fly.dev'
+const baseUrl= 'https://travelbase-backend.onrender.com'
 const addToBase = () => {
 
     axios
