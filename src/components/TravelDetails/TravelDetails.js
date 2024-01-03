@@ -11,9 +11,9 @@ const TravelDetails = ({travels}) => {
   const [travelData, setTravelData] = useState()
 
   const getTravels =  async () => {
-    const response = await axios({
+    await axios({
      method: 'get',
-     url: 'https://backend-travelapp.fly.dev/'
+     url: 'https://travelbase-backend.onrender.com/'
    })
    .then(res => 
      setTravelData(res.data))
@@ -28,8 +28,8 @@ const TravelDetails = ({travels}) => {
   const travelsArr = travels
   const travelsArrTwo = travelData
 
-  const travelSearch = travelData && travelsArr.findIndex(travel => travel._id == id)
-  const travelSearchTwo = travelData && travelsArrTwo.findIndex(travel => travel._id == id)
+  const travelSearch = travelData && travelsArr.findIndex(travel => travel._id === id)
+  const travelSearchTwo = travelData && travelsArrTwo.findIndex(travel => travel._id === id)
 
   return (
     <div className='travel-container'>
@@ -44,7 +44,7 @@ const TravelDetails = ({travels}) => {
           <div className='elements'>Weather: {travelData && travelData[travelSearchTwo].weather}</div>
           <br></br>
           <br></br>
-          <img className="discover-image"src={travelData && travelData[travelSearchTwo].discover.imageURL}></img>
+          <img className="discover-image" alt="pic" src={travelData && travelData[travelSearchTwo].discover.imageURL}></img>
           <br></br>
           <div className='elements'>Discover: {travelData && travelData[travelSearchTwo].discover.name}</div>
           <br></br>
