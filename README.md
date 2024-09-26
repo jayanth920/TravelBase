@@ -51,6 +51,6 @@ This project utilizes axios and react-router-dom in addition to the MERN stack.
 
 Project 3 for General Assembly. 
 
-## Built by: Nikhil Prasad, Jayanth Gajula, and Naveed Ahmad.
+## Built by: Nikhil Prasad, Jayanth, and Naveed Ahmad.
 
 
